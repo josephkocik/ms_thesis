@@ -1,0 +1,157 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'readVec2Stream_float_32u_149'" level="0">
+<item name = "Date">Tue Mar 16 16:15:08 2021
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
+<item name = "Project">krnl_lstm</item>
+<item name = "Solution">solution (Vitis Kernel Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z045-ffg900-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.172 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">1, 1, 10.000 ns, 10.000 ns, 1, 1, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 1, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">32, -, 0, 0, -</column>
+<column name="Multiplexer">-, -, -, 49, -</column>
+<column name="Register">-, -, 4, -, -</column>
+<specialColumn name="Available">1090, 900, 437200, 218600, 0</specialColumn>
+<specialColumn name="Utilization (%)">2, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="W_hf_0_U">readVec2Stream_float_32u_149_W_hf_0, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_1_U">readVec2Stream_float_32u_149_W_hf_1, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_10_U">readVec2Stream_float_32u_149_W_hf_10, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_11_U">readVec2Stream_float_32u_149_W_hf_11, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_12_U">readVec2Stream_float_32u_149_W_hf_12, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_13_U">readVec2Stream_float_32u_149_W_hf_13, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_14_U">readVec2Stream_float_32u_149_W_hf_14, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_15_U">readVec2Stream_float_32u_149_W_hf_15, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_16_U">readVec2Stream_float_32u_149_W_hf_16, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_17_U">readVec2Stream_float_32u_149_W_hf_17, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_18_U">readVec2Stream_float_32u_149_W_hf_18, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_19_U">readVec2Stream_float_32u_149_W_hf_19, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_2_U">readVec2Stream_float_32u_149_W_hf_2, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_20_U">readVec2Stream_float_32u_149_W_hf_20, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_21_U">readVec2Stream_float_32u_149_W_hf_21, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_22_U">readVec2Stream_float_32u_149_W_hf_22, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_23_U">readVec2Stream_float_32u_149_W_hf_23, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_24_U">readVec2Stream_float_32u_149_W_hf_24, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_25_U">readVec2Stream_float_32u_149_W_hf_25, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_26_U">readVec2Stream_float_32u_149_W_hf_26, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_27_U">readVec2Stream_float_32u_149_W_hf_27, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_28_U">readVec2Stream_float_32u_149_W_hf_28, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_29_U">readVec2Stream_float_32u_149_W_hf_29, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_3_U">readVec2Stream_float_32u_149_W_hf_3, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_30_U">readVec2Stream_float_32u_149_W_hf_30, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_31_U">readVec2Stream_float_32u_149_W_hf_31, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_4_U">readVec2Stream_float_32u_149_W_hf_4, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_5_U">readVec2Stream_float_32u_149_W_hf_5, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_6_U">readVec2Stream_float_32u_149_W_hf_6, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_7_U">readVec2Stream_float_32u_149_W_hf_7, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_8_U">readVec2Stream_float_32u_149_W_hf_8, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+<column name="W_hf_9_U">readVec2Stream_float_32u_149_W_hf_9, 1, 0, 0, 0, 48, 32, 1, 1536</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_block_state1">or, 0, 0, 1, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">13, 3, 1, 3</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="p_in_offset_blk_n">9, 2, 1, 2</column>
+<column name="real_start">9, 2, 1, 2</column>
+<column name="str_in12_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">2, 0, 2, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, readVec2Stream&lt;float, 32u&gt;.149, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, readVec2Stream&lt;float, 32u&gt;.149, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, readVec2Stream&lt;float, 32u&gt;.149, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, readVec2Stream&lt;float, 32u&gt;.149, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, readVec2Stream&lt;float, 32u&gt;.149, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, readVec2Stream&lt;float, 32u&gt;.149, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, readVec2Stream&lt;float, 32u&gt;.149, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, readVec2Stream&lt;float, 32u&gt;.149, return value</column>
+<column name="start_out">out, 1, ap_ctrl_hs, readVec2Stream&lt;float, 32u&gt;.149, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, readVec2Stream&lt;float, 32u&gt;.149, return value</column>
+<column name="str_in12_din">out, 1024, ap_fifo, str_in12, pointer</column>
+<column name="str_in12_full_n">in, 1, ap_fifo, str_in12, pointer</column>
+<column name="str_in12_write">out, 1, ap_fifo, str_in12, pointer</column>
+<column name="p_in_offset_dout">in, 6, ap_fifo, p_in_offset, pointer</column>
+<column name="p_in_offset_empty_n">in, 1, ap_fifo, p_in_offset, pointer</column>
+<column name="p_in_offset_read">out, 1, ap_fifo, p_in_offset, pointer</column>
+</table>
+</item>
+</section>
+</profile>

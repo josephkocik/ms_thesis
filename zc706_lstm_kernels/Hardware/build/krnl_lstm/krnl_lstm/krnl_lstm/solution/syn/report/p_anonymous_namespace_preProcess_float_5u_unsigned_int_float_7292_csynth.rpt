@@ -1,0 +1,223 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_preProcess_float_5u_unsigned_int_float_7292'
+================================================================
+* Date:           Tue Mar 16 16:15:38 2021
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        krnl_lstm
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.157 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       26|       26|  0.260 us|  0.260 us|   26|   26|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|       1|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|   32|    3280|    6256|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       -|     383|    -|
+|Register         |        -|    -|    1565|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|   32|    4845|    6640|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1090|  900|  437200|  218600|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|    3|       1|       3|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------+--------------------------------+---------+----+-----+-----+-----+
+    |               Instance               |             Module             | BRAM_18K| DSP|  FF | LUT | URAM|
+    +--------------------------------------+--------------------------------+---------+----+-----+-----+-----+
+    |fadd_32ns_32ns_32_5_full_dsp_1_U1231  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  391|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U1232  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  391|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U1233  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  391|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U1234  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  391|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U1235  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  391|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U1236  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  391|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U1237  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  391|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U1238  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  391|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U1239  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  391|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U1240  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  391|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U1241  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  391|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U1242  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  391|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U1243  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  391|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U1244  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  391|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U1245  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  391|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U1246  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  391|    0|
+    +--------------------------------------+--------------------------------+---------+----+-----+-----+-----+
+    |Total                                 |                                |        0|  32| 3280| 6256|    0|
+    +--------------------------------------+--------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   1|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   1|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------+-----+-----------+-----+-----------+
+    |       Name      | LUT | Input Size| Bits| Total Bits|
+    +-----------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm        |  139|         28|    1|         28|
+    |ap_done          |    9|          2|    1|          2|
+    |grp_fu_155_p0    |   13|          3|   32|         96|
+    |grp_fu_155_p1    |   13|          3|   32|         96|
+    |grp_fu_159_p0    |   13|          3|   32|         96|
+    |grp_fu_159_p1    |   13|          3|   32|         96|
+    |grp_fu_163_p0    |   13|          3|   32|         96|
+    |grp_fu_163_p1    |   13|          3|   32|         96|
+    |grp_fu_167_p0    |   13|          3|   32|         96|
+    |grp_fu_167_p1    |   13|          3|   32|         96|
+    |grp_fu_171_p0    |   13|          3|   32|         96|
+    |grp_fu_171_p1    |   13|          3|   32|         96|
+    |grp_fu_175_p0    |   13|          3|   32|         96|
+    |grp_fu_175_p1    |   13|          3|   32|         96|
+    |grp_fu_179_p0    |   13|          3|   32|         96|
+    |grp_fu_179_p1    |   13|          3|   32|         96|
+    |grp_fu_183_p0    |   13|          3|   32|         96|
+    |grp_fu_183_p1    |   13|          3|   32|         96|
+    |l_data2_blk_n    |    9|          2|    1|          2|
+    |l_mulStr1_blk_n  |    9|          2|    1|          2|
+    |real_start       |    9|          2|    1|          2|
+    +-----------------+-----+-----------+-----+-----------+
+    |Total            |  383|         84|  517|       1572|
+    +-----------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------+----+----+-----+-----------+
+    |             Name             | FF | LUT| Bits| Const Bits|
+    +------------------------------+----+----+-----+-----------+
+    |add_i2_i5_i12_i27_i_reg_1061  |  32|   0|   32|          0|
+    |add_i2_i5_i_i12_i_reg_1041    |  32|   0|   32|          0|
+    |add_i2_i_i5_i20_i_reg_1051    |  32|   0|   32|          0|
+    |add_i2_i_i_i5_i_reg_1031      |  32|   0|   32|          0|
+    |add_i_i2_i9_i24_i_reg_1056    |  32|   0|   32|          0|
+    |add_i_i2_i_i9_i_reg_1036      |  32|   0|   32|          0|
+    |add_i_i_i2_i17_i_reg_1046     |  32|   0|   32|          0|
+    |add_i_i_i_i2_i_reg_1026       |  32|   0|   32|          0|
+    |ap_CS_fsm                     |  27|   0|   27|          0|
+    |ap_done_reg                   |   1|   0|    1|          0|
+    |l_val_32_reg_711              |  32|   0|   32|          0|
+    |l_val_33_reg_716              |  32|   0|   32|          0|
+    |l_val_34_reg_721              |  32|   0|   32|          0|
+    |l_val_35_reg_726              |  32|   0|   32|          0|
+    |l_val_36_reg_731              |  32|   0|   32|          0|
+    |l_val_37_reg_736              |  32|   0|   32|          0|
+    |l_val_38_reg_741              |  32|   0|   32|          0|
+    |l_val_39_reg_746              |  32|   0|   32|          0|
+    |l_val_40_reg_751              |  32|   0|   32|          0|
+    |l_val_41_reg_756              |  32|   0|   32|          0|
+    |l_val_42_reg_761              |  32|   0|   32|          0|
+    |l_val_43_reg_766              |  32|   0|   32|          0|
+    |l_val_44_reg_771              |  32|   0|   32|          0|
+    |l_val_45_reg_776              |  32|   0|   32|          0|
+    |l_val_46_reg_781              |  32|   0|   32|          0|
+    |l_val_47_reg_786              |  32|   0|   32|          0|
+    |l_val_48_reg_791              |  32|   0|   32|          0|
+    |l_val_49_reg_796              |  32|   0|   32|          0|
+    |l_val_50_reg_801              |  32|   0|   32|          0|
+    |l_val_51_reg_806              |  32|   0|   32|          0|
+    |l_val_52_reg_811              |  32|   0|   32|          0|
+    |l_val_53_reg_816              |  32|   0|   32|          0|
+    |l_val_54_reg_821              |  32|   0|   32|          0|
+    |l_val_55_reg_826              |  32|   0|   32|          0|
+    |l_val_56_reg_831              |  32|   0|   32|          0|
+    |l_val_57_reg_836              |  32|   0|   32|          0|
+    |l_val_58_reg_841              |  32|   0|   32|          0|
+    |l_val_59_reg_846              |  32|   0|   32|          0|
+    |l_val_60_reg_851              |  32|   0|   32|          0|
+    |l_val_61_reg_856              |  32|   0|   32|          0|
+    |l_val_62_reg_861              |  32|   0|   32|          0|
+    |l_val_reg_706                 |  32|   0|   32|          0|
+    |reg_219                       |  32|   0|   32|          0|
+    |reg_224                       |  32|   0|   32|          0|
+    |reg_229                       |  32|   0|   32|          0|
+    |reg_234                       |  32|   0|   32|          0|
+    |reg_239                       |  32|   0|   32|          0|
+    |reg_244                       |  32|   0|   32|          0|
+    |reg_249                       |  32|   0|   32|          0|
+    |reg_254                       |  32|   0|   32|          0|
+    |start_once_reg                |   1|   0|    1|          0|
+    +------------------------------+----+----+-----+-----------+
+    |Total                         |1565|   0| 1565|          0|
+    +------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+------+------------+---------------------------------------------------------------------+--------------+
+|     RTL Ports     | Dir | Bits |  Protocol  |                            Source Object                            |    C Type    |
++-------------------+-----+------+------------+---------------------------------------------------------------------+--------------+
+|ap_clk             |   in|     1|  ap_ctrl_hs|  (anonymous namespace)preProcess<float, 5u, unsigned int, float>7292|  return value|
+|ap_rst             |   in|     1|  ap_ctrl_hs|  (anonymous namespace)preProcess<float, 5u, unsigned int, float>7292|  return value|
+|ap_start           |   in|     1|  ap_ctrl_hs|  (anonymous namespace)preProcess<float, 5u, unsigned int, float>7292|  return value|
+|start_full_n       |   in|     1|  ap_ctrl_hs|  (anonymous namespace)preProcess<float, 5u, unsigned int, float>7292|  return value|
+|ap_done            |  out|     1|  ap_ctrl_hs|  (anonymous namespace)preProcess<float, 5u, unsigned int, float>7292|  return value|
+|ap_continue        |   in|     1|  ap_ctrl_hs|  (anonymous namespace)preProcess<float, 5u, unsigned int, float>7292|  return value|
+|ap_idle            |  out|     1|  ap_ctrl_hs|  (anonymous namespace)preProcess<float, 5u, unsigned int, float>7292|  return value|
+|ap_ready           |  out|     1|  ap_ctrl_hs|  (anonymous namespace)preProcess<float, 5u, unsigned int, float>7292|  return value|
+|start_out          |  out|     1|  ap_ctrl_hs|  (anonymous namespace)preProcess<float, 5u, unsigned int, float>7292|  return value|
+|start_write        |  out|     1|  ap_ctrl_hs|  (anonymous namespace)preProcess<float, 5u, unsigned int, float>7292|  return value|
+|l_mulStr1_dout     |   in|  1024|     ap_fifo|                                                            l_mulStr1|       pointer|
+|l_mulStr1_empty_n  |   in|     1|     ap_fifo|                                                            l_mulStr1|       pointer|
+|l_mulStr1_read     |  out|     1|     ap_fifo|                                                            l_mulStr1|       pointer|
+|l_data2_din        |  out|    32|     ap_fifo|                                                              l_data2|       pointer|
+|l_data2_full_n     |   in|     1|     ap_fifo|                                                              l_data2|       pointer|
+|l_data2_write      |  out|     1|     ap_fifo|                                                              l_data2|       pointer|
++-------------------+-----+------+------------+---------------------------------------------------------------------+--------------+
+

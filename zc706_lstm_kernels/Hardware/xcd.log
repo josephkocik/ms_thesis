@@ -1,0 +1,13 @@
+Mon May 24 12:48:02 2021: Server was asked to start on port: '33057'
+Mon May 24 12:48:02 2021: Server is using token UUID: '61264514-0454-4893-8f7f-5f72d284a9f4'
+Mon May 24 12:48:02 2021: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Mon May 24 12:48:02 2021: Attempting to start server on port '33057'
+Mon May 24 12:48:02 2021: XCD main fifo: created main fifo '/tmp/xcdmain61264514-0454-4893-8f7f-5f72d284a9f4', fd read = 14
+Mon May 24 12:48:02 2021: Running Dispatch Server
+Mon May 24 12:48:02 2021: Version 2.1.0
+Mon May 24 12:48:10 2021: Dispatch Server: Accepted socket connection from client
+Mon May 24 12:48:10 2021: EXCHANGE_TOKEN received, server token: 61264514-0454-4893-8f7f-5f72d284a9f4, passed token: 61264514-0454-4893-8f7f-5f72d284a9f4
+Mon May 24 12:48:10 2021: SESSION_MGR: creating session with session uuid: '0bd58555-2651-476c-bfcd-65f17b538e87' and name 'krnl_lstm'
+Mon May 24 12:48:10 2021: GUIDANCE_SMGR: creating guidance session with uuid: '0bd58555-2651-476c-bfcd-65f17b538e87' and name 'krnl_lstm'
+Mon May 24 12:59:52 2021: SESSION_MGR: closing session for UUID '0bd58555-2651-476c-bfcd-65f17b538e87' with name 'krnl_lstm'
+Mon May 24 12:59:52 2021: GUIDANCE_SMGR: closing session for UUID '0bd58555-2651-476c-bfcd-65f17b538e87' with name 'krnl_lstm'

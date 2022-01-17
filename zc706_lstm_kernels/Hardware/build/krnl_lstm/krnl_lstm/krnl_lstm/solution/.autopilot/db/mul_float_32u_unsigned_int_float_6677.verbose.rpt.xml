@@ -1,0 +1,199 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'mul_float_32u_unsigned_int_float_6677'" level="0">
+<item name = "Date">Tue Mar 16 16:15:18 2021
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
+<item name = "Project">krnl_lstm</item>
+<item name = "Solution">solution (Vitis Kernel Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z045-ffg900-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.027 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">5, 5, 50.000 ns, 50.000 ns, 5, 5, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="call_ret3_constructor_fu_41">constructor, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ret_constructor_fu_46">constructor, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 1, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 96, 4576, 10304, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 74, -</column>
+<column name="Register">-, -, 3080, -, -</column>
+<specialColumn name="Available">1090, 900, 437200, 218600, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 10, 1, 4, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="call_ret3_constructor_fu_41">constructor, 0, 0, 0, 0, 0</column>
+<column name="call_ret_constructor_fu_46">constructor, 0, 0, 0, 0, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U591">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U592">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U593">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U594">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U595">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U596">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U597">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U598">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U599">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U600">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U601">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U602">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U603">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U604">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U605">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U606">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U607">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U608">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U609">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U610">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U611">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U612">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U613">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U614">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U615">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U616">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U617">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U618">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U619">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U620">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U621">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U622">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 322, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_block_state1">or, 0, 0, 1, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">29, 7, 1, 7</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="l_mulStr1_blk_n">9, 2, 1, 2</column>
+<column name="real_start">9, 2, 1, 2</column>
+<column name="str_in12_blk_n">9, 2, 1, 2</column>
+<column name="str_in23_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">6, 0, 6, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="mul_10_reg_1044">32, 0, 32, 0</column>
+<column name="mul_11_reg_1049">32, 0, 32, 0</column>
+<column name="mul_12_reg_1054">32, 0, 32, 0</column>
+<column name="mul_13_reg_1059">32, 0, 32, 0</column>
+<column name="mul_14_reg_1064">32, 0, 32, 0</column>
+<column name="mul_15_reg_1069">32, 0, 32, 0</column>
+<column name="mul_16_reg_1074">32, 0, 32, 0</column>
+<column name="mul_17_reg_1079">32, 0, 32, 0</column>
+<column name="mul_18_reg_1084">32, 0, 32, 0</column>
+<column name="mul_19_reg_1089">32, 0, 32, 0</column>
+<column name="mul_1_reg_999">32, 0, 32, 0</column>
+<column name="mul_20_reg_1094">32, 0, 32, 0</column>
+<column name="mul_21_reg_1099">32, 0, 32, 0</column>
+<column name="mul_22_reg_1104">32, 0, 32, 0</column>
+<column name="mul_23_reg_1109">32, 0, 32, 0</column>
+<column name="mul_24_reg_1114">32, 0, 32, 0</column>
+<column name="mul_25_reg_1119">32, 0, 32, 0</column>
+<column name="mul_26_reg_1124">32, 0, 32, 0</column>
+<column name="mul_27_reg_1129">32, 0, 32, 0</column>
+<column name="mul_28_reg_1134">32, 0, 32, 0</column>
+<column name="mul_29_reg_1139">32, 0, 32, 0</column>
+<column name="mul_2_reg_1004">32, 0, 32, 0</column>
+<column name="mul_30_reg_1144">32, 0, 32, 0</column>
+<column name="mul_3_reg_1009">32, 0, 32, 0</column>
+<column name="mul_4_reg_1014">32, 0, 32, 0</column>
+<column name="mul_5_reg_1019">32, 0, 32, 0</column>
+<column name="mul_6_reg_1024">32, 0, 32, 0</column>
+<column name="mul_7_reg_1029">32, 0, 32, 0</column>
+<column name="mul_8_reg_1034">32, 0, 32, 0</column>
+<column name="mul_9_reg_1039">32, 0, 32, 0</column>
+<column name="mul_reg_994">32, 0, 32, 0</column>
+<column name="mul_s_reg_1149">32, 0, 32, 0</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
+<column name="tmp_V_3_reg_669">1024, 0, 1024, 0</column>
+<column name="tmp_V_reg_664">1024, 0, 1024, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, mul&lt;float, 32u, unsigned int, float&gt;6677, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, mul&lt;float, 32u, unsigned int, float&gt;6677, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, mul&lt;float, 32u, unsigned int, float&gt;6677, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, mul&lt;float, 32u, unsigned int, float&gt;6677, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, mul&lt;float, 32u, unsigned int, float&gt;6677, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, mul&lt;float, 32u, unsigned int, float&gt;6677, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, mul&lt;float, 32u, unsigned int, float&gt;6677, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, mul&lt;float, 32u, unsigned int, float&gt;6677, return value</column>
+<column name="start_out">out, 1, ap_ctrl_hs, mul&lt;float, 32u, unsigned int, float&gt;6677, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, mul&lt;float, 32u, unsigned int, float&gt;6677, return value</column>
+<column name="str_in12_dout">in, 1024, ap_fifo, str_in12, pointer</column>
+<column name="str_in12_empty_n">in, 1, ap_fifo, str_in12, pointer</column>
+<column name="str_in12_read">out, 1, ap_fifo, str_in12, pointer</column>
+<column name="str_in23_dout">in, 1024, ap_fifo, str_in23, pointer</column>
+<column name="str_in23_empty_n">in, 1, ap_fifo, str_in23, pointer</column>
+<column name="str_in23_read">out, 1, ap_fifo, str_in23, pointer</column>
+<column name="l_mulStr1_din">out, 1024, ap_fifo, l_mulStr1, pointer</column>
+<column name="l_mulStr1_full_n">in, 1, ap_fifo, l_mulStr1, pointer</column>
+<column name="l_mulStr1_write">out, 1, ap_fifo, l_mulStr1, pointer</column>
+</table>
+</item>
+</section>
+</profile>

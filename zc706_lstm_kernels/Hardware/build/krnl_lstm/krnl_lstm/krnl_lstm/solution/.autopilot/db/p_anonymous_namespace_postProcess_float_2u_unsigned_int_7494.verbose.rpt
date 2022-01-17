@@ -1,0 +1,726 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_postProcess_float_2u_unsigned_int_7494'
+================================================================
+* Date:           Tue Mar 16 16:15:39 2021
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        krnl_lstm
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.329 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       19|       19|  0.190 us|  0.190 us|   19|   19|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|       1|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|    2|     205|     391|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       -|     171|    -|
+|Register         |        -|    -|     149|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|    2|     354|     563|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1090|  900|  437200|  218600|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|   ~0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------+--------------------------------+---------+----+-----+-----+-----+
+    |               Instance               |             Module             | BRAM_18K| DSP|  FF | LUT | URAM|
+    +--------------------------------------+--------------------------------+---------+----+-----+-----+-----+
+    |fadd_32ns_32ns_32_5_full_dsp_1_U1251  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  391|    0|
+    +--------------------------------------+--------------------------------+---------+----+-----+-----+-----+
+    |Total                                 |                                |        0|   2|  205|  391|    0|
+    +--------------------------------------+--------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   1|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   1|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------+-----+-----------+-----+-----------+
+    |     Name     | LUT | Input Size| Bits| Total Bits|
+    +--------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm     |  102|         21|    1|         21|
+    |ap_done       |    9|          2|    1|          2|
+    |grp_fu_31_p0  |   21|          5|   32|        160|
+    |grp_fu_31_p1  |   21|          5|   32|        160|
+    |l_dot2_blk_n  |    9|          2|    1|          2|
+    |l_pad3_blk_n  |    9|          2|    1|          2|
+    +--------------+-----+-----------+-----+-----------+
+    |Total         |  171|         37|   68|        347|
+    +--------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+----+----+-----+-----------+
+    |      Name      | FF | LUT| Bits| Const Bits|
+    +----------------+----+----+-----+-----------+
+    |add_i_i_reg_95  |  32|   0|   32|          0|
+    |ap_CS_fsm       |  20|   0|   20|          0|
+    |ap_done_reg     |   1|   0|    1|          0|
+    |reg_36          |  32|   0|   32|          0|
+    |reg_40          |  32|   0|   32|          0|
+    |reg_44          |  32|   0|   32|          0|
+    +----------------+----+----+-----+-----------+
+    |Total           | 149|   0|  149|          0|
+    +----------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+---------------------------------------------------------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  |                         Source Object                         |    C Type    |
++----------------+-----+-----+------------+---------------------------------------------------------------+--------------+
+|ap_clk          |   in|    1|  ap_ctrl_hs|  (anonymous namespace)postProcess<float, 2u, unsigned int>7494|  return value|
+|ap_rst          |   in|    1|  ap_ctrl_hs|  (anonymous namespace)postProcess<float, 2u, unsigned int>7494|  return value|
+|ap_start        |   in|    1|  ap_ctrl_hs|  (anonymous namespace)postProcess<float, 2u, unsigned int>7494|  return value|
+|ap_done         |  out|    1|  ap_ctrl_hs|  (anonymous namespace)postProcess<float, 2u, unsigned int>7494|  return value|
+|ap_continue     |   in|    1|  ap_ctrl_hs|  (anonymous namespace)postProcess<float, 2u, unsigned int>7494|  return value|
+|ap_idle         |  out|    1|  ap_ctrl_hs|  (anonymous namespace)postProcess<float, 2u, unsigned int>7494|  return value|
+|ap_ready        |  out|    1|  ap_ctrl_hs|  (anonymous namespace)postProcess<float, 2u, unsigned int>7494|  return value|
+|l_pad3_dout     |   in|   32|     ap_fifo|                                                         l_pad3|       pointer|
+|l_pad3_empty_n  |   in|    1|     ap_fifo|                                                         l_pad3|       pointer|
+|l_pad3_read     |  out|    1|     ap_fifo|                                                         l_pad3|       pointer|
+|l_dot2_din      |  out|   32|     ap_fifo|                                                         l_dot2|       pointer|
+|l_dot2_full_n   |   in|    1|     ap_fifo|                                                         l_dot2|       pointer|
+|l_dot2_write    |  out|    1|     ap_fifo|                                                         l_dot2|       pointer|
++----------------+-----+-----+------------+---------------------------------------------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 20
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.40>
+ST_1 : Operation 21 [1/1] (3.40ns)   --->   "%l_pad3_read = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %l_pad3" [/home/jrk/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 21 'read' 'l_pad3_read' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 2 <SV = 1> <Delay = 3.40>
+ST_2 : Operation 22 [1/1] (3.40ns)   --->   "%l_pad3_read_1 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %l_pad3" [/home/jrk/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 22 'read' 'l_pad3_read_1' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 3 <SV = 2> <Delay = 6.32>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%tmp = bitcast i32 %l_pad3_read" [/home/jrk/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 23 'bitcast' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_1 = bitcast i32 %l_pad3_read_1" [/home/jrk/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 24 'bitcast' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (3.40ns)   --->   "%l_pad3_read_2 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %l_pad3" [/home/jrk/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 25 'read' 'l_pad3_read_2' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 26 [5/5] (6.32ns)   --->   "%add_i2_i = fadd i32 %tmp_1, i32 %tmp" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 26 'fadd' 'add_i2_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.32>
+ST_4 : Operation 27 [1/1] (3.40ns)   --->   "%l_pad3_read_3 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %l_pad3" [/home/jrk/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 27 'read' 'l_pad3_read_3' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_4 : Operation 28 [4/5] (6.32ns)   --->   "%add_i2_i = fadd i32 %tmp_1, i32 %tmp" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 28 'fadd' 'add_i2_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.32>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_2 = bitcast i32 %l_pad3_read_2" [/home/jrk/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 29 'bitcast' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_3 = bitcast i32 %l_pad3_read_3" [/home/jrk/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 30 'bitcast' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 31 [5/5] (6.32ns)   --->   "%add_i_i = fadd i32 %tmp_3, i32 %tmp_2" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 31 'fadd' 'add_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 32 [3/5] (6.32ns)   --->   "%add_i2_i = fadd i32 %tmp_1, i32 %tmp" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 32 'fadd' 'add_i2_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.32>
+ST_6 : Operation 33 [4/5] (6.32ns)   --->   "%add_i_i = fadd i32 %tmp_3, i32 %tmp_2" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 33 'fadd' 'add_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 34 [2/5] (6.32ns)   --->   "%add_i2_i = fadd i32 %tmp_1, i32 %tmp" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 34 'fadd' 'add_i2_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.32>
+ST_7 : Operation 35 [3/5] (6.32ns)   --->   "%add_i_i = fadd i32 %tmp_3, i32 %tmp_2" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 35 'fadd' 'add_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 36 [1/5] (6.32ns)   --->   "%add_i2_i = fadd i32 %tmp_1, i32 %tmp" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 36 'fadd' 'add_i2_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.32>
+ST_8 : Operation 37 [2/5] (6.32ns)   --->   "%add_i_i = fadd i32 %tmp_3, i32 %tmp_2" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 37 'fadd' 'add_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.32>
+ST_9 : Operation 38 [1/5] (6.32ns)   --->   "%add_i_i = fadd i32 %tmp_3, i32 %tmp_2" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 38 'fadd' 'add_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 6.32>
+ST_10 : Operation 39 [5/5] (6.32ns)   --->   "%add_i = fadd i32 %add_i_i, i32 %add_i2_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 39 'fadd' 'add_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 6.32>
+ST_11 : Operation 40 [4/5] (6.32ns)   --->   "%add_i = fadd i32 %add_i_i, i32 %add_i2_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 40 'fadd' 'add_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 6.32>
+ST_12 : Operation 41 [3/5] (6.32ns)   --->   "%add_i = fadd i32 %add_i_i, i32 %add_i2_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 41 'fadd' 'add_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 6.32>
+ST_13 : Operation 42 [2/5] (6.32ns)   --->   "%add_i = fadd i32 %add_i_i, i32 %add_i2_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 42 'fadd' 'add_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 6.32>
+ST_14 : Operation 43 [1/5] (6.32ns)   --->   "%add_i = fadd i32 %add_i_i, i32 %add_i2_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 43 'fadd' 'add_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 6.32>
+ST_15 : Operation 44 [5/5] (6.32ns)   --->   "%add7 = fadd i32 %add_i, i32 0" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/funcs/sum.hpp:78]   --->   Operation 44 'fadd' 'add7' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 6.32>
+ST_16 : Operation 45 [4/5] (6.32ns)   --->   "%add7 = fadd i32 %add_i, i32 0" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/funcs/sum.hpp:78]   --->   Operation 45 'fadd' 'add7' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 6.32>
+ST_17 : Operation 46 [3/5] (6.32ns)   --->   "%add7 = fadd i32 %add_i, i32 0" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/funcs/sum.hpp:78]   --->   Operation 46 'fadd' 'add7' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 6.32>
+ST_18 : Operation 47 [2/5] (6.32ns)   --->   "%add7 = fadd i32 %add_i, i32 0" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/funcs/sum.hpp:78]   --->   Operation 47 'fadd' 'add7' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 6.32>
+ST_19 : Operation 48 [1/5] (6.32ns)   --->   "%add7 = fadd i32 %add_i, i32 0" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/funcs/sum.hpp:78]   --->   Operation 48 'fadd' 'add7' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 3.40>
+ST_20 : Operation 49 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %l_pad3, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 49 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 50 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %l_dot2, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 50 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 51 [1/1] (0.00ns)   --->   "%bitcast_ln244 = bitcast i32 %add7" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:244]   --->   Operation 51 'bitcast' 'bitcast_ln244' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 52 [1/1] (3.40ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %l_dot2, i32 %bitcast_ln244" [/home/jrk/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 52 'write' 'write_ln174' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_20 : Operation 53 [1/1] (0.00ns)   --->   "%ret_ln82 = ret" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/funcs/sum.hpp:82]   --->   Operation 53 'ret' 'ret_ln82' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ l_pad3]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ l_dot2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+l_pad3_read       (read         ) [ 001100000000000000000]
+l_pad3_read_1     (read         ) [ 000100000000000000000]
+tmp               (bitcast      ) [ 000011110000000000000]
+tmp_1             (bitcast      ) [ 000011110000000000000]
+l_pad3_read_2     (read         ) [ 000011000000000000000]
+l_pad3_read_3     (read         ) [ 000001000000000000000]
+tmp_2             (bitcast      ) [ 000000111100000000000]
+tmp_3             (bitcast      ) [ 000000111100000000000]
+add_i2_i          (fadd         ) [ 000000001111111000000]
+add_i_i           (fadd         ) [ 000000000011111000000]
+add_i             (fadd         ) [ 000000000000000111110]
+add7              (fadd         ) [ 000000000000000000001]
+specinterface_ln0 (specinterface) [ 000000000000000000000]
+specinterface_ln0 (specinterface) [ 000000000000000000000]
+bitcast_ln244     (bitcast      ) [ 000000000000000000000]
+write_ln174       (write        ) [ 000000000000000000000]
+ret_ln82          (ret          ) [ 000000000000000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="l_pad3">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="l_pad3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="l_dot2">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="l_dot2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1001" name="const_4">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i32P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_5"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i32P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1004" name="grp_read_fu_18">
+<pin_list>
+<pin id="19" dir="0" index="0" bw="32" slack="0"/>
+<pin id="20" dir="0" index="1" bw="32" slack="0"/>
+<pin id="21" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="l_pad3_read/1 l_pad3_read_1/2 l_pad3_read_2/3 l_pad3_read_3/4 "/>
+</bind>
+</comp>
+
+<comp id="24" class="1004" name="write_ln174_write_fu_24">
+<pin_list>
+<pin id="25" dir="0" index="0" bw="0" slack="0"/>
+<pin id="26" dir="0" index="1" bw="32" slack="0"/>
+<pin id="27" dir="0" index="2" bw="32" slack="0"/>
+<pin id="28" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln174/20 "/>
+</bind>
+</comp>
+
+<comp id="31" class="1004" name="grp_fu_31">
+<pin_list>
+<pin id="32" dir="0" index="0" bw="32" slack="0"/>
+<pin id="33" dir="0" index="1" bw="32" slack="0"/>
+<pin id="34" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="fadd(9) " fcode="fadd"/>
+<opset="add_i2_i/3 add_i_i/5 add_i/10 add7/15 "/>
+</bind>
+</comp>
+
+<comp id="36" class="1005" name="reg_36">
+<pin_list>
+<pin id="37" dir="0" index="0" bw="32" slack="2"/>
+<pin id="38" dir="1" index="1" bw="32" slack="2"/>
+</pin_list>
+<bind>
+<opset="l_pad3_read l_pad3_read_2 "/>
+</bind>
+</comp>
+
+<comp id="40" class="1005" name="reg_40">
+<pin_list>
+<pin id="41" dir="0" index="0" bw="32" slack="1"/>
+<pin id="42" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="l_pad3_read_1 l_pad3_read_3 "/>
+</bind>
+</comp>
+
+<comp id="44" class="1005" name="reg_44">
+<pin_list>
+<pin id="45" dir="0" index="0" bw="32" slack="1"/>
+<pin id="46" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="add_i2_i add_i add7 "/>
+</bind>
+</comp>
+
+<comp id="50" class="1004" name="tmp_fu_50">
+<pin_list>
+<pin id="51" dir="0" index="0" bw="32" slack="2"/>
+<pin id="52" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitcast(44) " fcode="bitcast"/>
+<opset="tmp/3 "/>
+</bind>
+</comp>
+
+<comp id="55" class="1004" name="tmp_1_fu_55">
+<pin_list>
+<pin id="56" dir="0" index="0" bw="32" slack="1"/>
+<pin id="57" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitcast(44) " fcode="bitcast"/>
+<opset="tmp_1/3 "/>
+</bind>
+</comp>
+
+<comp id="60" class="1004" name="tmp_2_fu_60">
+<pin_list>
+<pin id="61" dir="0" index="0" bw="32" slack="2"/>
+<pin id="62" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitcast(44) " fcode="bitcast"/>
+<opset="tmp_2/5 "/>
+</bind>
+</comp>
+
+<comp id="65" class="1004" name="tmp_3_fu_65">
+<pin_list>
+<pin id="66" dir="0" index="0" bw="32" slack="1"/>
+<pin id="67" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitcast(44) " fcode="bitcast"/>
+<opset="tmp_3/5 "/>
+</bind>
+</comp>
+
+<comp id="70" class="1004" name="bitcast_ln244_fu_70">
+<pin_list>
+<pin id="71" dir="0" index="0" bw="32" slack="1"/>
+<pin id="72" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitcast(44) " fcode="bitcast"/>
+<opset="bitcast_ln244/20 "/>
+</bind>
+</comp>
+
+<comp id="75" class="1005" name="tmp_reg_75">
+<pin_list>
+<pin id="76" dir="0" index="0" bw="32" slack="1"/>
+<pin id="77" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="tmp "/>
+</bind>
+</comp>
+
+<comp id="80" class="1005" name="tmp_1_reg_80">
+<pin_list>
+<pin id="81" dir="0" index="0" bw="32" slack="1"/>
+<pin id="82" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="tmp_1 "/>
+</bind>
+</comp>
+
+<comp id="85" class="1005" name="tmp_2_reg_85">
+<pin_list>
+<pin id="86" dir="0" index="0" bw="32" slack="1"/>
+<pin id="87" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="tmp_2 "/>
+</bind>
+</comp>
+
+<comp id="90" class="1005" name="tmp_3_reg_90">
+<pin_list>
+<pin id="91" dir="0" index="0" bw="32" slack="1"/>
+<pin id="92" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="tmp_3 "/>
+</bind>
+</comp>
+
+<comp id="95" class="1005" name="add_i_i_reg_95">
+<pin_list>
+<pin id="96" dir="0" index="0" bw="32" slack="1"/>
+<pin id="97" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="add_i_i "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="22"><net_src comp="4" pin="0"/><net_sink comp="18" pin=0"/></net>
+
+<net id="23"><net_src comp="0" pin="0"/><net_sink comp="18" pin=1"/></net>
+
+<net id="29"><net_src comp="16" pin="0"/><net_sink comp="24" pin=0"/></net>
+
+<net id="30"><net_src comp="2" pin="0"/><net_sink comp="24" pin=1"/></net>
+
+<net id="35"><net_src comp="6" pin="0"/><net_sink comp="31" pin=1"/></net>
+
+<net id="39"><net_src comp="18" pin="2"/><net_sink comp="36" pin=0"/></net>
+
+<net id="43"><net_src comp="18" pin="2"/><net_sink comp="40" pin=0"/></net>
+
+<net id="47"><net_src comp="31" pin="2"/><net_sink comp="44" pin=0"/></net>
+
+<net id="48"><net_src comp="44" pin="1"/><net_sink comp="31" pin=1"/></net>
+
+<net id="49"><net_src comp="44" pin="1"/><net_sink comp="31" pin=0"/></net>
+
+<net id="53"><net_src comp="36" pin="1"/><net_sink comp="50" pin=0"/></net>
+
+<net id="54"><net_src comp="50" pin="1"/><net_sink comp="31" pin=1"/></net>
+
+<net id="58"><net_src comp="40" pin="1"/><net_sink comp="55" pin=0"/></net>
+
+<net id="59"><net_src comp="55" pin="1"/><net_sink comp="31" pin=0"/></net>
+
+<net id="63"><net_src comp="36" pin="1"/><net_sink comp="60" pin=0"/></net>
+
+<net id="64"><net_src comp="60" pin="1"/><net_sink comp="31" pin=1"/></net>
+
+<net id="68"><net_src comp="40" pin="1"/><net_sink comp="65" pin=0"/></net>
+
+<net id="69"><net_src comp="65" pin="1"/><net_sink comp="31" pin=0"/></net>
+
+<net id="73"><net_src comp="44" pin="1"/><net_sink comp="70" pin=0"/></net>
+
+<net id="74"><net_src comp="70" pin="1"/><net_sink comp="24" pin=2"/></net>
+
+<net id="78"><net_src comp="50" pin="1"/><net_sink comp="75" pin=0"/></net>
+
+<net id="79"><net_src comp="75" pin="1"/><net_sink comp="31" pin=1"/></net>
+
+<net id="83"><net_src comp="55" pin="1"/><net_sink comp="80" pin=0"/></net>
+
+<net id="84"><net_src comp="80" pin="1"/><net_sink comp="31" pin=0"/></net>
+
+<net id="88"><net_src comp="60" pin="1"/><net_sink comp="85" pin=0"/></net>
+
+<net id="89"><net_src comp="85" pin="1"/><net_sink comp="31" pin=1"/></net>
+
+<net id="93"><net_src comp="65" pin="1"/><net_sink comp="90" pin=0"/></net>
+
+<net id="94"><net_src comp="90" pin="1"/><net_sink comp="31" pin=0"/></net>
+
+<net id="98"><net_src comp="31" pin="2"/><net_sink comp="95" pin=0"/></net>
+
+<net id="99"><net_src comp="95" pin="1"/><net_sink comp="31" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: l_dot2 | {20 }
+ - Input state : 
+	Port: (anonymous namespace)postProcess<float, 2u, unsigned int>7494 : l_pad3 | {1 2 3 4 }
+	Port: (anonymous namespace)postProcess<float, 2u, unsigned int>7494 : l_dot2 | {}
+  - Chain level:
+	State 1
+	State 2
+	State 3
+		add_i2_i : 1
+	State 4
+	State 5
+		add_i_i : 1
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+		write_ln174 : 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-------------------------|---------|---------|---------|
+| Operation|     Functional Unit     |   DSP   |    FF   |   LUT   |
+|----------|-------------------------|---------|---------|---------|
+|   fadd   |        grp_fu_31        |    2    |   205   |   391   |
+|----------|-------------------------|---------|---------|---------|
+|   read   |      grp_read_fu_18     |    0    |    0    |    0    |
+|----------|-------------------------|---------|---------|---------|
+|   write  | write_ln174_write_fu_24 |    0    |    0    |    0    |
+|----------|-------------------------|---------|---------|---------|
+|   Total  |                         |    2    |   205   |   391   |
+|----------|-------------------------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++--------------+--------+
+|              |   FF   |
++--------------+--------+
+|add_i_i_reg_95|   32   |
+|    reg_36    |   32   |
+|    reg_40    |   32   |
+|    reg_44    |   32   |
+| tmp_1_reg_80 |   32   |
+| tmp_2_reg_85 |   32   |
+| tmp_3_reg_90 |   32   |
+|  tmp_reg_75  |   32   |
++--------------+--------+
+|     Total    |   256  |
++--------------+--------+
+
+* Multiplexer (MUX) list: 
+|-----------|------|------|------|--------||---------||---------|
+|    Comp   |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-----------|------|------|------|--------||---------||---------|
+| grp_fu_31 |  p0  |   6  |  32  |   192  ||    25   |
+| grp_fu_31 |  p1  |   6  |  32  |   192  ||    25   |
+|-----------|------|------|------|--------||---------||---------|
+|   Total   |      |      |      |   384  || 2.81257 ||    50   |
+|-----------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           |   DSP  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |    2   |    -   |   205  |   391  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    2   |    -   |   50   |
+|  Register |    -   |    -   |   256  |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |    2   |    2   |   461  |   441  |
++-----------+--------+--------+--------+--------+

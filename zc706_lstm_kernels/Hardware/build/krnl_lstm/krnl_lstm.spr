@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="krnl_lstm" dir="">
+  <FileSets>
+    <FileSet Name="kernel_krnl_lstm" Type="DesignSrcs">
+      <File Path="/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

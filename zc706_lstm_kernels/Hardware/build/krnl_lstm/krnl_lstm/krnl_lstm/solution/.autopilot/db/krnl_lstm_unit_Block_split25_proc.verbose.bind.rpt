@@ -1,0 +1,575 @@
+
+
+================================================================
+== Vitis HLS Report for 'krnl_lstm_unit_Block_split25_proc'
+================================================================
+* Date:           Mon May 24 12:51:11 2021
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        krnl_lstm
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.329 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       14|       14|  0.140 us|  0.140 us|   14|   14|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 15
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.40>
+ST_1 : Operation 16 [1/1] (3.40ns)   --->   "%x_t_read = read i32 @_ssdm_op_Read.ap_fifo.floatP0A, i32 %x_t" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 16 'read' 'x_t_read' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+
+State 2 <SV = 1> <Delay = 4.72>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%p_read_4 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 17 'read' 'p_read_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [4/4] (4.72ns)   --->   "%mul_i_i = fmul i32 %x_t_read, i32 %p_read_4" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 18 'fmul' 'mul_i_i' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 4.72>
+ST_3 : Operation 19 [3/4] (4.72ns)   --->   "%mul_i_i = fmul i32 %x_t_read, i32 %p_read_4" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 19 'fmul' 'mul_i_i' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 4.72>
+ST_4 : Operation 20 [2/4] (4.72ns)   --->   "%mul_i_i = fmul i32 %x_t_read, i32 %p_read_4" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 20 'fmul' 'mul_i_i' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 4.72>
+ST_5 : Operation 21 [1/4] (4.72ns)   --->   "%mul_i_i = fmul i32 %x_t_read, i32 %p_read_4" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 21 'fmul' 'mul_i_i' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.32>
+ST_6 : Operation 22 [1/1] (0.00ns)   --->   "%dot_f_read = read i32 @_ssdm_op_Read.ap_auto.floatP0A, i32 %dot_f" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 22 'read' 'dot_f_read' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 23 [5/5] (6.32ns)   --->   "%add_i_i = fadd i32 %dot_f_read, i32 %mul_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 23 'fadd' 'add_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.32>
+ST_7 : Operation 24 [4/5] (6.32ns)   --->   "%add_i_i = fadd i32 %dot_f_read, i32 %mul_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 24 'fadd' 'add_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.32>
+ST_8 : Operation 25 [3/5] (6.32ns)   --->   "%add_i_i = fadd i32 %dot_f_read, i32 %mul_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 25 'fadd' 'add_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.32>
+ST_9 : Operation 26 [2/5] (6.32ns)   --->   "%add_i_i = fadd i32 %dot_f_read, i32 %mul_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 26 'fadd' 'add_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 6.32>
+ST_10 : Operation 27 [1/5] (6.32ns)   --->   "%add_i_i = fadd i32 %dot_f_read, i32 %mul_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 27 'fadd' 'add_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 6.32>
+ST_11 : Operation 28 [1/1] (0.00ns)   --->   "%p_read13 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read1" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 28 'read' 'p_read13' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 29 [5/5] (6.32ns)   --->   "%add1_loc = fadd i32 %add_i_i, i32 %p_read13" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 29 'fadd' 'add1_loc' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 6.32>
+ST_12 : Operation 30 [4/5] (6.32ns)   --->   "%add1_loc = fadd i32 %add_i_i, i32 %p_read13" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 30 'fadd' 'add1_loc' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 6.32>
+ST_13 : Operation 31 [3/5] (6.32ns)   --->   "%add1_loc = fadd i32 %add_i_i, i32 %p_read13" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 31 'fadd' 'add1_loc' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 6.32>
+ST_14 : Operation 32 [2/5] (6.32ns)   --->   "%add1_loc = fadd i32 %add_i_i, i32 %p_read13" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 32 'fadd' 'add1_loc' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 6.32>
+ST_15 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %x_t, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 34 [1/5] (6.32ns)   --->   "%add1_loc = fadd i32 %add_i_i, i32 %p_read13" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 34 'fadd' 'add1_loc' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 35 [1/1] (0.00ns)   --->   "%ret_ln359 = ret i32 %add1_loc" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:359]   --->   Operation 35 'ret' 'ret_ln359' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ dot_f]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ x_t]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ p_read1]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+x_t_read          (read         ) [ 0011110000000000]
+p_read_4          (read         ) [ 0001110000000000]
+mul_i_i           (fmul         ) [ 0000001111100000]
+dot_f_read        (read         ) [ 0000000111100000]
+add_i_i           (fadd         ) [ 0000000000011111]
+p_read13          (read         ) [ 0000000000001111]
+specinterface_ln0 (specinterface) [ 0000000000000000]
+add1_loc          (fadd         ) [ 0000000000000000]
+ret_ln359         (ret          ) [ 0000000000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="dot_f">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dot_f"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="p_read">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_read"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="x_t">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="x_t"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="p_read1">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_read1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.floatP0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.float"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.floatP0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ap_fifo_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ScalarProp_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1004" name="x_t_read_read_fu_28">
+<pin_list>
+<pin id="29" dir="0" index="0" bw="32" slack="0"/>
+<pin id="30" dir="0" index="1" bw="32" slack="0"/>
+<pin id="31" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="x_t_read/1 "/>
+</bind>
+</comp>
+
+<comp id="34" class="1004" name="p_read_4_read_fu_34">
+<pin_list>
+<pin id="35" dir="0" index="0" bw="32" slack="0"/>
+<pin id="36" dir="0" index="1" bw="32" slack="0"/>
+<pin id="37" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_read_4/2 "/>
+</bind>
+</comp>
+
+<comp id="40" class="1004" name="dot_f_read_read_fu_40">
+<pin_list>
+<pin id="41" dir="0" index="0" bw="32" slack="0"/>
+<pin id="42" dir="0" index="1" bw="32" slack="0"/>
+<pin id="43" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="dot_f_read/6 "/>
+</bind>
+</comp>
+
+<comp id="46" class="1004" name="p_read13_read_fu_46">
+<pin_list>
+<pin id="47" dir="0" index="0" bw="32" slack="0"/>
+<pin id="48" dir="0" index="1" bw="32" slack="0"/>
+<pin id="49" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_read13/11 "/>
+</bind>
+</comp>
+
+<comp id="52" class="1004" name="grp_fu_52">
+<pin_list>
+<pin id="53" dir="0" index="0" bw="32" slack="0"/>
+<pin id="54" dir="0" index="1" bw="32" slack="0"/>
+<pin id="55" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="fadd(9) " fcode="fadd"/>
+<opset="add_i_i/6 add1_loc/11 "/>
+</bind>
+</comp>
+
+<comp id="58" class="1004" name="grp_fu_58">
+<pin_list>
+<pin id="59" dir="0" index="0" bw="32" slack="1"/>
+<pin id="60" dir="0" index="1" bw="32" slack="0"/>
+<pin id="61" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="fmul(13) " fcode="fmul"/>
+<opset="mul_i_i/2 "/>
+</bind>
+</comp>
+
+<comp id="63" class="1005" name="x_t_read_reg_63">
+<pin_list>
+<pin id="64" dir="0" index="0" bw="32" slack="1"/>
+<pin id="65" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="x_t_read "/>
+</bind>
+</comp>
+
+<comp id="68" class="1005" name="p_read_4_reg_68">
+<pin_list>
+<pin id="69" dir="0" index="0" bw="32" slack="1"/>
+<pin id="70" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_read_4 "/>
+</bind>
+</comp>
+
+<comp id="73" class="1005" name="mul_i_i_reg_73">
+<pin_list>
+<pin id="74" dir="0" index="0" bw="32" slack="1"/>
+<pin id="75" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="mul_i_i "/>
+</bind>
+</comp>
+
+<comp id="78" class="1005" name="dot_f_read_reg_78">
+<pin_list>
+<pin id="79" dir="0" index="0" bw="32" slack="1"/>
+<pin id="80" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="dot_f_read "/>
+</bind>
+</comp>
+
+<comp id="83" class="1005" name="add_i_i_reg_83">
+<pin_list>
+<pin id="84" dir="0" index="0" bw="32" slack="1"/>
+<pin id="85" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="add_i_i "/>
+</bind>
+</comp>
+
+<comp id="88" class="1005" name="p_read13_reg_88">
+<pin_list>
+<pin id="89" dir="0" index="0" bw="32" slack="1"/>
+<pin id="90" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_read13 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="32"><net_src comp="8" pin="0"/><net_sink comp="28" pin=0"/></net>
+
+<net id="33"><net_src comp="4" pin="0"/><net_sink comp="28" pin=1"/></net>
+
+<net id="38"><net_src comp="10" pin="0"/><net_sink comp="34" pin=0"/></net>
+
+<net id="39"><net_src comp="2" pin="0"/><net_sink comp="34" pin=1"/></net>
+
+<net id="44"><net_src comp="12" pin="0"/><net_sink comp="40" pin=0"/></net>
+
+<net id="45"><net_src comp="0" pin="0"/><net_sink comp="40" pin=1"/></net>
+
+<net id="50"><net_src comp="10" pin="0"/><net_sink comp="46" pin=0"/></net>
+
+<net id="51"><net_src comp="6" pin="0"/><net_sink comp="46" pin=1"/></net>
+
+<net id="56"><net_src comp="40" pin="2"/><net_sink comp="52" pin=0"/></net>
+
+<net id="57"><net_src comp="46" pin="2"/><net_sink comp="52" pin=1"/></net>
+
+<net id="62"><net_src comp="34" pin="2"/><net_sink comp="58" pin=1"/></net>
+
+<net id="66"><net_src comp="28" pin="2"/><net_sink comp="63" pin=0"/></net>
+
+<net id="67"><net_src comp="63" pin="1"/><net_sink comp="58" pin=0"/></net>
+
+<net id="71"><net_src comp="34" pin="2"/><net_sink comp="68" pin=0"/></net>
+
+<net id="72"><net_src comp="68" pin="1"/><net_sink comp="58" pin=1"/></net>
+
+<net id="76"><net_src comp="58" pin="2"/><net_sink comp="73" pin=0"/></net>
+
+<net id="77"><net_src comp="73" pin="1"/><net_sink comp="52" pin=1"/></net>
+
+<net id="81"><net_src comp="40" pin="2"/><net_sink comp="78" pin=0"/></net>
+
+<net id="82"><net_src comp="78" pin="1"/><net_sink comp="52" pin=0"/></net>
+
+<net id="86"><net_src comp="52" pin="2"/><net_sink comp="83" pin=0"/></net>
+
+<net id="87"><net_src comp="83" pin="1"/><net_sink comp="52" pin=0"/></net>
+
+<net id="91"><net_src comp="46" pin="2"/><net_sink comp="88" pin=0"/></net>
+
+<net id="92"><net_src comp="88" pin="1"/><net_sink comp="52" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+	Port: krnl_lstm_unit_Block_.split25_proc : dot_f | {6 }
+	Port: krnl_lstm_unit_Block_.split25_proc : p_read | {2 }
+	Port: krnl_lstm_unit_Block_.split25_proc : x_t | {1 }
+	Port: krnl_lstm_unit_Block_.split25_proc : p_read1 | {11 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+		ret_ln359 : 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-----------------------|---------|---------|---------|
+| Operation|    Functional Unit    |   DSP   |    FF   |   LUT   |
+|----------|-----------------------|---------|---------|---------|
+|   fadd   |       grp_fu_52       |    2    |   205   |   391   |
+|----------|-----------------------|---------|---------|---------|
+|   fmul   |       grp_fu_58       |    3    |   143   |   322   |
+|----------|-----------------------|---------|---------|---------|
+|          |  x_t_read_read_fu_28  |    0    |    0    |    0    |
+|   read   |  p_read_4_read_fu_34  |    0    |    0    |    0    |
+|          | dot_f_read_read_fu_40 |    0    |    0    |    0    |
+|          |  p_read13_read_fu_46  |    0    |    0    |    0    |
+|----------|-----------------------|---------|---------|---------|
+|   Total  |                       |    5    |   348   |   713   |
+|----------|-----------------------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++-----------------+--------+
+|                 |   FF   |
++-----------------+--------+
+|  add_i_i_reg_83 |   32   |
+|dot_f_read_reg_78|   32   |
+|  mul_i_i_reg_73 |   32   |
+| p_read13_reg_88 |   32   |
+| p_read_4_reg_68 |   32   |
+| x_t_read_reg_63 |   32   |
++-----------------+--------+
+|      Total      |   192  |
++-----------------+--------+
+
+* Multiplexer (MUX) list: 
+|-----------|------|------|------|--------||---------||---------|
+|    Comp   |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-----------|------|------|------|--------||---------||---------|
+| grp_fu_52 |  p0  |   3  |  32  |   96   ||    13   |
+| grp_fu_52 |  p1  |   3  |  32  |   96   ||    13   |
+| grp_fu_58 |  p1  |   2  |  32  |   64   ||    9    |
+|-----------|------|------|------|--------||---------||---------|
+|   Total   |      |      |      |   256  || 3.94814 ||    35   |
+|-----------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           |   DSP  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |    5   |    -   |   348  |   713  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    3   |    -   |   35   |
+|  Register |    -   |    -   |   192  |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |    5   |    3   |   540  |   748  |
++-----------+--------+--------+--------+--------+

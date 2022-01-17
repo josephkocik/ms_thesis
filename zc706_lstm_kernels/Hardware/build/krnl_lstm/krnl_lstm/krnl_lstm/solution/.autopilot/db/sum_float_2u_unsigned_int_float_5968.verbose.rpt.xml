@@ -1,0 +1,122 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'sum_float_2u_unsigned_int_float_5968'" level="0">
+<item name = "Date">Mon May 24 12:52:46 2021
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
+<item name = "Project">krnl_lstm</item>
+<item name = "Solution">solution (Vitis Kernel Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z045-ffg900-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.935 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">77, 77, 0.770 us, 0.770 us, 35, 35, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_6475_U0">p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_6475, 26, 26, 0.260 us, 0.260 us, 26, 26, none</column>
+<column name="p_anonymous_namespace_postProcess_float_2u_unsigned_int_6677_U0">p_anonymous_namespace_postProcess_float_2u_unsigned_int_6677, 34, 34, 0.340 us, 0.340 us, 34, 34, none</column>
+<column name="padding_float_4u_unsigned_int_6576_U0">padding_float_4u_unsigned_int_6576, 15, 15, 0.150 us, 0.150 us, 15, 15, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 1, -</column>
+<column name="FIFO">-, -, 198, 136, -</column>
+<column name="Instance">-, 12, 2625, 3432, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available">1090, 900, 437200, 218600, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 1, ~0, 1, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="p_anonymous_namespace_postProcess_float_2u_unsigned_int_6677_U0">p_anonymous_namespace_postProcess_float_2u_unsigned_int_6677, 0, 6, 875, 1492, 0</column>
+<column name="p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_6475_U0">p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_6475, 0, 6, 1732, 1821, 0</column>
+<column name="padding_float_4u_unsigned_int_6576_U0">padding_float_4u_unsigned_int_6576, 0, 0, 18, 119, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="l_data_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="l_pad_U">0, 99, 0, -, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_idle">and, 0, 0, 1, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="l_mulStr1_dout">in, 128, ap_fifo, l_mulStr1, pointer</column>
+<column name="l_mulStr1_empty_n">in, 1, ap_fifo, l_mulStr1, pointer</column>
+<column name="l_mulStr1_read">out, 1, ap_fifo, l_mulStr1, pointer</column>
+<column name="l_dot2_din">out, 32, ap_fifo, l_dot2, pointer</column>
+<column name="l_dot2_full_n">in, 1, ap_fifo, l_dot2, pointer</column>
+<column name="l_dot2_write">out, 1, ap_fifo, l_dot2, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, sum&lt;float, 2u, unsigned int, float&gt;5968, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, sum&lt;float, 2u, unsigned int, float&gt;5968, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, sum&lt;float, 2u, unsigned int, float&gt;5968, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, sum&lt;float, 2u, unsigned int, float&gt;5968, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, sum&lt;float, 2u, unsigned int, float&gt;5968, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, sum&lt;float, 2u, unsigned int, float&gt;5968, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, sum&lt;float, 2u, unsigned int, float&gt;5968, return value</column>
+</table>
+</item>
+</section>
+</profile>

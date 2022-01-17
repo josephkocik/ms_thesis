@@ -1,0 +1,157 @@
+
+
+================================================================
+== Vitis HLS Report for 'krnl_lstm_unit_Block_split2_proc'
+================================================================
+* Date:           Mon May 24 12:51:03 2021
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        krnl_lstm
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.172 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        1|        1|  10.000 ns|  10.000 ns|    1|    1|     none|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.17>
+ST_1 : Operation 3 [1/1] (3.40ns)   --->   "%unit_ind_read = read i6 @_ssdm_op_Read.ap_fifo.i6P0A, i6 %unit_ind"   --->   Operation 3 'read' 'unit_ind_read' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 6> <Depth = 2> <FIFO>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%unit_ind_cast_i = zext i6 %unit_ind_read"   --->   Operation 4 'zext' 'unit_ind_cast_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%W_xf_addr = getelementptr i32 %W_xf, i32 0, i32 %unit_ind_cast_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:337->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 5 'getelementptr' 'W_xf_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [2/2] (2.77ns)   --->   "%w_xf = load i6 %W_xf_addr" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:337->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 6 'load' 'w_xf' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%W_xi_addr = getelementptr i32 %W_xi, i32 0, i32 %unit_ind_cast_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:338->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 7 'getelementptr' 'W_xi_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (2.77ns)   --->   "%w_xi = load i6 %W_xi_addr" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:338->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 8 'load' 'w_xi' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%W_xc_addr = getelementptr i32 %W_xc, i32 0, i32 %unit_ind_cast_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:339->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 9 'getelementptr' 'W_xc_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [2/2] (2.77ns)   --->   "%w_xc = load i6 %W_xc_addr" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:339->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 10 'load' 'w_xc' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%W_xo_addr = getelementptr i32 %W_xo, i32 0, i32 %unit_ind_cast_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:340->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 11 'getelementptr' 'W_xo_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [2/2] (2.77ns)   --->   "%w_xo = load i6 %W_xo_addr" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:340->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 12 'load' 'w_xo' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%B_f_addr = getelementptr i32 %B_f, i32 0, i32 %unit_ind_cast_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:347->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 13 'getelementptr' 'B_f_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [2/2] (2.77ns)   --->   "%b_f = load i6 %B_f_addr" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:347->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 14 'load' 'b_f' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%B_i_addr = getelementptr i32 %B_i, i32 0, i32 %unit_ind_cast_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:348->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 15 'getelementptr' 'B_i_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [2/2] (2.77ns)   --->   "%b_i = load i6 %B_i_addr" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:348->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 16 'load' 'b_i' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%B_c_addr = getelementptr i32 %B_c, i32 0, i32 %unit_ind_cast_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:349->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 17 'getelementptr' 'B_c_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [2/2] (2.77ns)   --->   "%b_c = load i6 %B_c_addr" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:349->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 18 'load' 'b_c' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%B_o_addr = getelementptr i32 %B_o, i32 0, i32 %unit_ind_cast_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:350->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 19 'getelementptr' 'B_o_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [2/2] (2.77ns)   --->   "%b_o = load i6 %B_o_addr" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:350->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 20 'load' 'b_o' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+
+State 2 <SV = 1> <Delay = 6.17>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %b_o_out_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %b_c_out_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %b_i_out_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w_xo_out_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w_xc_out_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w_xi_out_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i6 %unit_ind, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/2] (2.77ns)   --->   "%w_xf = load i6 %W_xf_addr" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:337->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 28 'load' 'w_xf' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+ST_2 : Operation 29 [1/2] (2.77ns)   --->   "%w_xi = load i6 %W_xi_addr" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:338->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 29 'load' 'w_xi' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+ST_2 : Operation 30 [1/2] (2.77ns)   --->   "%w_xc = load i6 %W_xc_addr" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:339->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 30 'load' 'w_xc' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+ST_2 : Operation 31 [1/2] (2.77ns)   --->   "%w_xo = load i6 %W_xo_addr" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:340->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 31 'load' 'w_xo' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+ST_2 : Operation 32 [1/2] (2.77ns)   --->   "%b_f = load i6 %B_f_addr" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:347->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 32 'load' 'b_f' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+ST_2 : Operation 33 [1/2] (2.77ns)   --->   "%b_i = load i6 %B_i_addr" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:348->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 33 'load' 'b_i' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+ST_2 : Operation 34 [1/2] (2.77ns)   --->   "%b_c = load i6 %B_c_addr" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:349->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 34 'load' 'b_c' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+ST_2 : Operation 35 [1/2] (2.77ns)   --->   "%b_o = load i6 %B_o_addr" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:350->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 35 'load' 'b_o' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 64> <ROM>
+ST_2 : Operation 36 [1/1] (3.40ns)   --->   "%write_ln338 = write void @_ssdm_op_Write.ap_fifo.floatP0A, i32 %w_xi_out_out, i32 %w_xi" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:338->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 36 'write' 'write_ln338' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_2 : Operation 37 [1/1] (3.40ns)   --->   "%write_ln339 = write void @_ssdm_op_Write.ap_fifo.floatP0A, i32 %w_xc_out_out, i32 %w_xc" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:339->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 37 'write' 'write_ln339' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_2 : Operation 38 [1/1] (3.40ns)   --->   "%write_ln340 = write void @_ssdm_op_Write.ap_fifo.floatP0A, i32 %w_xo_out_out, i32 %w_xo" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:340->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 38 'write' 'write_ln340' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_2 : Operation 39 [1/1] (3.40ns)   --->   "%write_ln348 = write void @_ssdm_op_Write.ap_fifo.floatP0A, i32 %b_i_out_out, i32 %b_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:348->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 39 'write' 'write_ln348' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_2 : Operation 40 [1/1] (3.40ns)   --->   "%write_ln349 = write void @_ssdm_op_Write.ap_fifo.floatP0A, i32 %b_c_out_out, i32 %b_c" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:349->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 40 'write' 'write_ln349' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_2 : Operation 41 [1/1] (3.40ns)   --->   "%write_ln350 = write void @_ssdm_op_Write.ap_fifo.floatP0A, i32 %b_o_out_out, i32 %b_o" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:350->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 41 'write' 'write_ln350' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%mrv = insertvalue i64 <undef>, i32 %w_xf" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 42 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i64 %mrv, i32 %b_f" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 43 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%ret_ln320 = ret i64 %mrv_1" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320]   --->   Operation 44 'ret' 'ret_ln320' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 6.17ns
+The critical path consists of the following:
+	fifo read on port 'unit_ind' [31]  (3.4 ns)
+	'getelementptr' operation ('W_xf_addr', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:337->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320) [33]  (0 ns)
+	'load' operation ('w_xf', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:337->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320) on array 'W_xf' [34]  (2.77 ns)
+
+ <State 2>: 6.17ns
+The critical path consists of the following:
+	'load' operation ('w_xi', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:338->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320) on array 'W_xi' [36]  (2.77 ns)
+	fifo write on port 'w_xi_out_out' (/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:338->/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp:320) [49]  (3.4 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

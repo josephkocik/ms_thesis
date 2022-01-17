@@ -1,0 +1,205 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'p_anonymous_namespace_preProcess_float_5u_unsigned_int_float_7283'" level="0">
+<item name = "Date">Tue Mar 16 16:15:11 2021
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
+<item name = "Project">krnl_lstm</item>
+<item name = "Solution">solution (Vitis Kernel Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z045-ffg900-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.157 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">26, 26, 0.260 us, 0.260 us, 26, 26, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 1, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 32, 3280, 6256, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 383, -</column>
+<column name="Register">-, -, 1565, -, -</column>
+<specialColumn name="Available">1090, 900, 437200, 218600, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 3, 1, 3, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="fadd_32ns_32ns_32_5_full_dsp_1_U327">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 391, 0</column>
+<column name="fadd_32ns_32ns_32_5_full_dsp_1_U328">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 391, 0</column>
+<column name="fadd_32ns_32ns_32_5_full_dsp_1_U329">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 391, 0</column>
+<column name="fadd_32ns_32ns_32_5_full_dsp_1_U330">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 391, 0</column>
+<column name="fadd_32ns_32ns_32_5_full_dsp_1_U331">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 391, 0</column>
+<column name="fadd_32ns_32ns_32_5_full_dsp_1_U332">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 391, 0</column>
+<column name="fadd_32ns_32ns_32_5_full_dsp_1_U333">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 391, 0</column>
+<column name="fadd_32ns_32ns_32_5_full_dsp_1_U334">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 391, 0</column>
+<column name="fadd_32ns_32ns_32_5_full_dsp_1_U335">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 391, 0</column>
+<column name="fadd_32ns_32ns_32_5_full_dsp_1_U336">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 391, 0</column>
+<column name="fadd_32ns_32ns_32_5_full_dsp_1_U337">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 391, 0</column>
+<column name="fadd_32ns_32ns_32_5_full_dsp_1_U338">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 391, 0</column>
+<column name="fadd_32ns_32ns_32_5_full_dsp_1_U339">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 391, 0</column>
+<column name="fadd_32ns_32ns_32_5_full_dsp_1_U340">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 391, 0</column>
+<column name="fadd_32ns_32ns_32_5_full_dsp_1_U341">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 391, 0</column>
+<column name="fadd_32ns_32ns_32_5_full_dsp_1_U342">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 391, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_block_state1">or, 0, 0, 1, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">139, 28, 1, 28</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="grp_fu_155_p0">13, 3, 32, 96</column>
+<column name="grp_fu_155_p1">13, 3, 32, 96</column>
+<column name="grp_fu_159_p0">13, 3, 32, 96</column>
+<column name="grp_fu_159_p1">13, 3, 32, 96</column>
+<column name="grp_fu_163_p0">13, 3, 32, 96</column>
+<column name="grp_fu_163_p1">13, 3, 32, 96</column>
+<column name="grp_fu_167_p0">13, 3, 32, 96</column>
+<column name="grp_fu_167_p1">13, 3, 32, 96</column>
+<column name="grp_fu_171_p0">13, 3, 32, 96</column>
+<column name="grp_fu_171_p1">13, 3, 32, 96</column>
+<column name="grp_fu_175_p0">13, 3, 32, 96</column>
+<column name="grp_fu_175_p1">13, 3, 32, 96</column>
+<column name="grp_fu_179_p0">13, 3, 32, 96</column>
+<column name="grp_fu_179_p1">13, 3, 32, 96</column>
+<column name="grp_fu_183_p0">13, 3, 32, 96</column>
+<column name="grp_fu_183_p1">13, 3, 32, 96</column>
+<column name="l_data2_blk_n">9, 2, 1, 2</column>
+<column name="l_mulStr1_blk_n">9, 2, 1, 2</column>
+<column name="real_start">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_i2_i5_i12_i27_i_reg_1061">32, 0, 32, 0</column>
+<column name="add_i2_i5_i_i12_i_reg_1041">32, 0, 32, 0</column>
+<column name="add_i2_i_i5_i20_i_reg_1051">32, 0, 32, 0</column>
+<column name="add_i2_i_i_i5_i_reg_1031">32, 0, 32, 0</column>
+<column name="add_i_i2_i9_i24_i_reg_1056">32, 0, 32, 0</column>
+<column name="add_i_i2_i_i9_i_reg_1036">32, 0, 32, 0</column>
+<column name="add_i_i_i2_i17_i_reg_1046">32, 0, 32, 0</column>
+<column name="add_i_i_i_i2_i_reg_1026">32, 0, 32, 0</column>
+<column name="ap_CS_fsm">27, 0, 27, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="l_val_125_reg_711">32, 0, 32, 0</column>
+<column name="l_val_126_reg_716">32, 0, 32, 0</column>
+<column name="l_val_127_reg_721">32, 0, 32, 0</column>
+<column name="l_val_128_reg_726">32, 0, 32, 0</column>
+<column name="l_val_129_reg_731">32, 0, 32, 0</column>
+<column name="l_val_130_reg_736">32, 0, 32, 0</column>
+<column name="l_val_131_reg_741">32, 0, 32, 0</column>
+<column name="l_val_132_reg_746">32, 0, 32, 0</column>
+<column name="l_val_133_reg_751">32, 0, 32, 0</column>
+<column name="l_val_134_reg_756">32, 0, 32, 0</column>
+<column name="l_val_135_reg_761">32, 0, 32, 0</column>
+<column name="l_val_136_reg_766">32, 0, 32, 0</column>
+<column name="l_val_137_reg_771">32, 0, 32, 0</column>
+<column name="l_val_138_reg_776">32, 0, 32, 0</column>
+<column name="l_val_139_reg_781">32, 0, 32, 0</column>
+<column name="l_val_140_reg_786">32, 0, 32, 0</column>
+<column name="l_val_141_reg_791">32, 0, 32, 0</column>
+<column name="l_val_142_reg_796">32, 0, 32, 0</column>
+<column name="l_val_143_reg_801">32, 0, 32, 0</column>
+<column name="l_val_144_reg_806">32, 0, 32, 0</column>
+<column name="l_val_145_reg_811">32, 0, 32, 0</column>
+<column name="l_val_146_reg_816">32, 0, 32, 0</column>
+<column name="l_val_147_reg_821">32, 0, 32, 0</column>
+<column name="l_val_148_reg_826">32, 0, 32, 0</column>
+<column name="l_val_149_reg_831">32, 0, 32, 0</column>
+<column name="l_val_150_reg_836">32, 0, 32, 0</column>
+<column name="l_val_151_reg_841">32, 0, 32, 0</column>
+<column name="l_val_152_reg_846">32, 0, 32, 0</column>
+<column name="l_val_153_reg_851">32, 0, 32, 0</column>
+<column name="l_val_154_reg_856">32, 0, 32, 0</column>
+<column name="l_val_155_reg_861">32, 0, 32, 0</column>
+<column name="l_val_reg_706">32, 0, 32, 0</column>
+<column name="reg_219">32, 0, 32, 0</column>
+<column name="reg_224">32, 0, 32, 0</column>
+<column name="reg_229">32, 0, 32, 0</column>
+<column name="reg_234">32, 0, 32, 0</column>
+<column name="reg_239">32, 0, 32, 0</column>
+<column name="reg_244">32, 0, 32, 0</column>
+<column name="reg_249">32, 0, 32, 0</column>
+<column name="reg_254">32, 0, 32, 0</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, (anonymous namespace)preProcess&lt;float, 5u, unsigned int, float&gt;7283, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, (anonymous namespace)preProcess&lt;float, 5u, unsigned int, float&gt;7283, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, (anonymous namespace)preProcess&lt;float, 5u, unsigned int, float&gt;7283, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, (anonymous namespace)preProcess&lt;float, 5u, unsigned int, float&gt;7283, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, (anonymous namespace)preProcess&lt;float, 5u, unsigned int, float&gt;7283, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, (anonymous namespace)preProcess&lt;float, 5u, unsigned int, float&gt;7283, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, (anonymous namespace)preProcess&lt;float, 5u, unsigned int, float&gt;7283, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, (anonymous namespace)preProcess&lt;float, 5u, unsigned int, float&gt;7283, return value</column>
+<column name="start_out">out, 1, ap_ctrl_hs, (anonymous namespace)preProcess&lt;float, 5u, unsigned int, float&gt;7283, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, (anonymous namespace)preProcess&lt;float, 5u, unsigned int, float&gt;7283, return value</column>
+<column name="l_mulStr1_dout">in, 1024, ap_fifo, l_mulStr1, pointer</column>
+<column name="l_mulStr1_empty_n">in, 1, ap_fifo, l_mulStr1, pointer</column>
+<column name="l_mulStr1_read">out, 1, ap_fifo, l_mulStr1, pointer</column>
+<column name="l_data2_din">out, 32, ap_fifo, l_data2, pointer</column>
+<column name="l_data2_full_n">in, 1, ap_fifo, l_data2, pointer</column>
+<column name="l_data2_write">out, 1, ap_fifo, l_data2, pointer</column>
+</table>
+</item>
+</section>
+</profile>

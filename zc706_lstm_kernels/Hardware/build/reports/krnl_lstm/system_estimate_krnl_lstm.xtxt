@@ -1,0 +1,303 @@
+===============================================================================
+Version:    v++ v2020.2 (64-bit)
+Build:      SW Build (by xbuild) on 2020-11-18-05:13:29
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Mon May 24 12:59:51 2021
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             krnl_lstm
+Target Device:           vendor:lib:design_1:1.0
+Target Clock:            100.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+krnl_lstm    c     fpga0:OCL_REGION_0  krnl_lstm       1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     krnl_lstm
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name                                                        Target Frequency  Estimated Frequency
+------------  -----------  -----------------------------------------------------------------  ----------------  -------------------
+krnl_lstm_1   krnl_lstm    krnl_lstm_entry3                                                   100               294.031158
+krnl_lstm_1   krnl_lstm    read_input143                                                      100               136.986298
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_entry122                                            100               294.031158
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split2_proc                                   100               162.022034
+krnl_lstm_1   krnl_lstm    krnl_split                                                         100               294.031158
+krnl_lstm_1   krnl_lstm    krnl_dot33_entry106                                                100               147.015579
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_141                                        100               162.022034
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_3142                                       100               147.015579
+krnl_lstm_1   krnl_lstm    mul_float_4u_unsigned_int_float_5867                               100               181.554108
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_6475  100               126.023949
+krnl_lstm_1   krnl_lstm    padding_float_4u_unsigned_int_6576                                 100               147.015579
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_postProcess_float_2u_unsigned_int_6677       100               140.686554
+krnl_lstm_1   krnl_lstm    sum_float_2u_unsigned_int_float_5968                               100               126.023949
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_dot_tree_float_2u_unsigned_int_float_5360    100               126.023949
+krnl_lstm_1   krnl_lstm    dot4054                                                            100               126.023949
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3243_Block_split13_proc93                100               294.031158
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3243                                     100               126.023949
+krnl_lstm_1   krnl_lstm    krnl_dot33                                                         100               126.023949
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split25_proc                                  100               158.002838
+krnl_lstm_1   krnl_lstm    krnl_lut_sigmoid34                                                 100               141.143265
+krnl_lstm_1   krnl_lstm    krnl_dot35_entry110                                                100               147.015579
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_144                                        100               162.022034
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_3145                                       100               147.015579
+krnl_lstm_1   krnl_lstm    mul_float_4u_unsigned_int_float_5869                               100               181.554108
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_6478  100               126.023949
+krnl_lstm_1   krnl_lstm    padding_float_4u_unsigned_int_6579                                 100               147.015579
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_postProcess_float_2u_unsigned_int_6680       100               140.686554
+krnl_lstm_1   krnl_lstm    sum_float_2u_unsigned_int_float_5970                               100               126.023949
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_dot_tree_float_2u_unsigned_int_float_5361    100               126.023949
+krnl_lstm_1   krnl_lstm    dot4055                                                            100               126.023949
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3246_Block_split13_proc94                100               294.031158
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3246                                     100               126.023949
+krnl_lstm_1   krnl_lstm    krnl_dot35                                                         100               126.023949
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split29_proc                                  100               158.002838
+krnl_lstm_1   krnl_lstm    krnl_lut_sigmoid36                                                 100               141.143265
+krnl_lstm_1   krnl_lstm    krnl_dot37_entry114                                                100               147.015579
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_147                                        100               162.022034
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_3148                                       100               147.015579
+krnl_lstm_1   krnl_lstm    mul_float_4u_unsigned_int_float_5871                               100               181.554108
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_6481  100               126.023949
+krnl_lstm_1   krnl_lstm    padding_float_4u_unsigned_int_6582                                 100               147.015579
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_postProcess_float_2u_unsigned_int_6683       100               140.686554
+krnl_lstm_1   krnl_lstm    sum_float_2u_unsigned_int_float_5972                               100               126.023949
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_dot_tree_float_2u_unsigned_int_float_5362    100               126.023949
+krnl_lstm_1   krnl_lstm    dot4056                                                            100               126.023949
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3249_Block_split13_proc95                100               294.031158
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3249                                     100               126.023949
+krnl_lstm_1   krnl_lstm    krnl_dot37                                                         100               126.023949
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split213_proc                                 100               158.002838
+krnl_lstm_1   krnl_lstm    krnl_lut_tanh38                                                    100               141.143265
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split216_proc                                 100               211.461197
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split217_proc                                 100               inf
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split218_proc                                 100               158.002838
+krnl_lstm_1   krnl_lstm    krnl_dot39_entry118                                                100               147.015579
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_150                                        100               162.022034
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_3151                                       100               147.015579
+krnl_lstm_1   krnl_lstm    mul_float_4u_unsigned_int_float_5873                               100               181.554108
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_6484  100               126.023949
+krnl_lstm_1   krnl_lstm    padding_float_4u_unsigned_int_6585                                 100               147.015579
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_postProcess_float_2u_unsigned_int_6686       100               140.686554
+krnl_lstm_1   krnl_lstm    sum_float_2u_unsigned_int_float_5974                               100               126.023949
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_dot_tree_float_2u_unsigned_int_float_5363    100               126.023949
+krnl_lstm_1   krnl_lstm    dot4057                                                            100               126.023949
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3252_Block_split13_proc96                100               294.031158
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3252                                     100               126.023949
+krnl_lstm_1   krnl_lstm    krnl_dot39                                                         100               126.023949
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split221_proc                                 100               158.002838
+krnl_lstm_1   krnl_lstm    krnl_lut_sigmoid                                                   100               141.143265
+krnl_lstm_1   krnl_lstm    krnl_lut_tanh                                                      100               141.143265
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split225_proc                                 100               294.031158
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split226_proc                                 100               211.461197
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit                                                     100               126.023949
+krnl_lstm_1   krnl_lstm    copy_array                                                         100               inf
+krnl_lstm_1   krnl_lstm    krnl_dot_1_entry139                                                100               294.031158
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_s                                          100               147.015579
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_2                                          100               193.948792
+krnl_lstm_1   krnl_lstm    mul_float_4u_unsigned_int_float_s                                  100               181.554108
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_s     100               126.023949
+krnl_lstm_1   krnl_lstm    padding_float_4u_unsigned_int_s                                    100               147.015579
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_postProcess_float_2u_unsigned_int_s          100               140.686554
+krnl_lstm_1   krnl_lstm    sum_float_2u_unsigned_int_float_s                                  100               126.023949
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_dot_tree_float_2u_unsigned_int_float_s       100               126.023949
+krnl_lstm_1   krnl_lstm    dot                                                                100               126.023949
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_Block_split13_proc97                     100               294.031158
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_s                                        100               126.023949
+krnl_lstm_1   krnl_lstm    krnl_dot_1                                                         100               126.023949
+krnl_lstm_1   krnl_lstm    krnl_lstm_str                                                      100               126.023949
+krnl_lstm_1   krnl_lstm    write_output                                                       100               136.986298
+krnl_lstm_1   krnl_lstm    krnl_lstm                                                          100               126.023949
+
+Latency Information
+Compute Unit  Kernel Name  Module Name                                                        Start Interval           Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  -----------------------------------------------------------------  -----------------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+krnl_lstm_1   krnl_lstm    krnl_lstm_entry3                                                   0                        0              0             0               0 ns             0 ns            0 ns
+krnl_lstm_1   krnl_lstm    read_input143                                                      470894                   470894         470894        470894          4.709 ms         4.709 ms        4.709 ms
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_entry122                                            0                        0              0             0               0 ns             0 ns            0 ns
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split2_proc                                   1                        1              1             1               10.000 ns        10.000 ns       10.000 ns
+krnl_lstm_1   krnl_lstm    krnl_split                                                         0                        0              0             0               0 ns             0 ns            0 ns
+krnl_lstm_1   krnl_lstm    krnl_dot33_entry106                                                0                        0              0             0               0 ns             0 ns            0 ns
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_141                                        16                       16             16            16              0.160 us         0.160 us        0.160 us
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_3142                                       15                       15             15            15              0.150 us         0.150 us        0.150 us
+krnl_lstm_1   krnl_lstm    mul_float_4u_unsigned_int_float_5867                               20                       20             20            20              0.200 us         0.200 us        0.200 us
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_6475  26                       26             26            26              0.260 us         0.260 us        0.260 us
+krnl_lstm_1   krnl_lstm    padding_float_4u_unsigned_int_6576                                 15                       15             15            15              0.150 us         0.150 us        0.150 us
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_postProcess_float_2u_unsigned_int_6677       34                       34             34            34              0.340 us         0.340 us        0.340 us
+krnl_lstm_1   krnl_lstm    sum_float_2u_unsigned_int_float_5968                               35                       77             77            77              0.770 us         0.770 us        0.770 us
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_dot_tree_float_2u_unsigned_int_float_5360    35                       98             98            98              0.980 us         0.980 us        0.980 us
+krnl_lstm_1   krnl_lstm    dot4054                                                            35                       98             98            98              0.980 us         0.980 us        0.980 us
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3243_Block_split13_proc93                0                        0              0             0               0 ns             0 ns            0 ns
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3243                                     35                       98             98            98              0.980 us         0.980 us        0.980 us
+krnl_lstm_1   krnl_lstm    krnl_dot33                                                         35                       116            116           116             1.160 us         1.160 us        1.160 us
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split25_proc                                  14                       14             14            14              0.140 us         0.140 us        0.140 us
+krnl_lstm_1   krnl_lstm    krnl_lut_sigmoid34                                                 21                       21             21            21              0.210 us         0.210 us        0.210 us
+krnl_lstm_1   krnl_lstm    krnl_dot35_entry110                                                0                        0              0             0               0 ns             0 ns            0 ns
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_144                                        16                       16             16            16              0.160 us         0.160 us        0.160 us
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_3145                                       15                       15             15            15              0.150 us         0.150 us        0.150 us
+krnl_lstm_1   krnl_lstm    mul_float_4u_unsigned_int_float_5869                               20                       20             20            20              0.200 us         0.200 us        0.200 us
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_6478  26                       26             26            26              0.260 us         0.260 us        0.260 us
+krnl_lstm_1   krnl_lstm    padding_float_4u_unsigned_int_6579                                 15                       15             15            15              0.150 us         0.150 us        0.150 us
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_postProcess_float_2u_unsigned_int_6680       34                       34             34            34              0.340 us         0.340 us        0.340 us
+krnl_lstm_1   krnl_lstm    sum_float_2u_unsigned_int_float_5970                               35                       77             77            77              0.770 us         0.770 us        0.770 us
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_dot_tree_float_2u_unsigned_int_float_5361    35                       98             98            98              0.980 us         0.980 us        0.980 us
+krnl_lstm_1   krnl_lstm    dot4055                                                            35                       98             98            98              0.980 us         0.980 us        0.980 us
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3246_Block_split13_proc94                0                        0              0             0               0 ns             0 ns            0 ns
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3246                                     35                       98             98            98              0.980 us         0.980 us        0.980 us
+krnl_lstm_1   krnl_lstm    krnl_dot35                                                         35                       116            116           116             1.160 us         1.160 us        1.160 us
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split29_proc                                  14                       14             14            14              0.140 us         0.140 us        0.140 us
+krnl_lstm_1   krnl_lstm    krnl_lut_sigmoid36                                                 21                       21             21            21              0.210 us         0.210 us        0.210 us
+krnl_lstm_1   krnl_lstm    krnl_dot37_entry114                                                0                        0              0             0               0 ns             0 ns            0 ns
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_147                                        16                       16             16            16              0.160 us         0.160 us        0.160 us
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_3148                                       15                       15             15            15              0.150 us         0.150 us        0.150 us
+krnl_lstm_1   krnl_lstm    mul_float_4u_unsigned_int_float_5871                               20                       20             20            20              0.200 us         0.200 us        0.200 us
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_6481  26                       26             26            26              0.260 us         0.260 us        0.260 us
+krnl_lstm_1   krnl_lstm    padding_float_4u_unsigned_int_6582                                 15                       15             15            15              0.150 us         0.150 us        0.150 us
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_postProcess_float_2u_unsigned_int_6683       34                       34             34            34              0.340 us         0.340 us        0.340 us
+krnl_lstm_1   krnl_lstm    sum_float_2u_unsigned_int_float_5972                               35                       77             77            77              0.770 us         0.770 us        0.770 us
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_dot_tree_float_2u_unsigned_int_float_5362    35                       98             98            98              0.980 us         0.980 us        0.980 us
+krnl_lstm_1   krnl_lstm    dot4056                                                            35                       98             98            98              0.980 us         0.980 us        0.980 us
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3249_Block_split13_proc95                0                        0              0             0               0 ns             0 ns            0 ns
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3249                                     35                       98             98            98              0.980 us         0.980 us        0.980 us
+krnl_lstm_1   krnl_lstm    krnl_dot37                                                         35                       116            116           116             1.160 us         1.160 us        1.160 us
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split213_proc                                 14                       14             14            14              0.140 us         0.140 us        0.140 us
+krnl_lstm_1   krnl_lstm    krnl_lut_tanh38                                                    21                       21             21            21              0.210 us         0.210 us        0.210 us
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split216_proc                                 5                        5              5             5               50.000 ns        50.000 ns       50.000 ns
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split217_proc                                 0                        0              0             0               0 ns             0 ns            0 ns
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split218_proc                                 9                        9              9             9               90.000 ns        90.000 ns       90.000 ns
+krnl_lstm_1   krnl_lstm    krnl_dot39_entry118                                                0                        0              0             0               0 ns             0 ns            0 ns
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_150                                        16                       16             16            16              0.160 us         0.160 us        0.160 us
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_3151                                       15                       15             15            15              0.150 us         0.150 us        0.150 us
+krnl_lstm_1   krnl_lstm    mul_float_4u_unsigned_int_float_5873                               20                       20             20            20              0.200 us         0.200 us        0.200 us
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_6484  26                       26             26            26              0.260 us         0.260 us        0.260 us
+krnl_lstm_1   krnl_lstm    padding_float_4u_unsigned_int_6585                                 15                       15             15            15              0.150 us         0.150 us        0.150 us
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_postProcess_float_2u_unsigned_int_6686       34                       34             34            34              0.340 us         0.340 us        0.340 us
+krnl_lstm_1   krnl_lstm    sum_float_2u_unsigned_int_float_5974                               35                       77             77            77              0.770 us         0.770 us        0.770 us
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_dot_tree_float_2u_unsigned_int_float_5363    35                       98             98            98              0.980 us         0.980 us        0.980 us
+krnl_lstm_1   krnl_lstm    dot4057                                                            35                       98             98            98              0.980 us         0.980 us        0.980 us
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3252_Block_split13_proc96                0                        0              0             0               0 ns             0 ns            0 ns
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3252                                     35                       98             98            98              0.980 us         0.980 us        0.980 us
+krnl_lstm_1   krnl_lstm    krnl_dot39                                                         35                       116            116           116             1.160 us         1.160 us        1.160 us
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split221_proc                                 14                       14             14            14              0.140 us         0.140 us        0.140 us
+krnl_lstm_1   krnl_lstm    krnl_lut_sigmoid                                                   21                       21             21            21              0.210 us         0.210 us        0.210 us
+krnl_lstm_1   krnl_lstm    krnl_lut_tanh                                                      21                       21             21            21              0.210 us         0.210 us        0.210 us
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split225_proc                                 0                        0              0             0               0 ns             0 ns            0 ns
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split226_proc                                 4                        4              4             4               40.000 ns        40.000 ns       40.000 ns
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit                                                     35                       132            132           132             1.320 us         1.320 us        1.320 us
+krnl_lstm_1   krnl_lstm    copy_array                                                         0                        0              0             0               0 ns             0 ns            0 ns
+krnl_lstm_1   krnl_lstm    krnl_dot_1_entry139                                                0                        0              0             0               0 ns             0 ns            0 ns
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_s                                          15                       15             15            15              0.150 us         0.150 us        0.150 us
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_2                                          16                       16             16            16              0.160 us         0.160 us        0.160 us
+krnl_lstm_1   krnl_lstm    mul_float_4u_unsigned_int_float_s                                  20                       20             20            20              0.200 us         0.200 us        0.200 us
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_s     26                       26             26            26              0.260 us         0.260 us        0.260 us
+krnl_lstm_1   krnl_lstm    padding_float_4u_unsigned_int_s                                    15                       15             15            15              0.150 us         0.150 us        0.150 us
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_postProcess_float_2u_unsigned_int_s          34                       34             34            34              0.340 us         0.340 us        0.340 us
+krnl_lstm_1   krnl_lstm    sum_float_2u_unsigned_int_float_s                                  35                       77             77            77              0.770 us         0.770 us        0.770 us
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_dot_tree_float_2u_unsigned_int_float_s       35                       98             98            98              0.980 us         0.980 us        0.980 us
+krnl_lstm_1   krnl_lstm    dot                                                                35                       98             98            98              0.980 us         0.980 us        0.980 us
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_Block_split13_proc97                     0                        0              0             0               0 ns             0 ns            0 ns
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_s                                        35                       98             98            98              0.980 us         0.980 us        0.980 us
+krnl_lstm_1   krnl_lstm    krnl_dot_1                                                         35                       116            116           116             1.160 us         1.160 us        1.160 us
+krnl_lstm_1   krnl_lstm    krnl_lstm_str                                                      4068826442 ~ 4630514702  4068826442     4349905982    4630514702      40.688 sec       43.499 sec      46.305 sec
+krnl_lstm_1   krnl_lstm    write_output                                                       134591                   134591         134591        134591          1.346 ms         1.346 ms        1.346 ms
+krnl_lstm_1   krnl_lstm    krnl_lstm                                                          4068826443 ~ 4630514703  335537940      335537940     335547480       3.355 sec        3.355 sec       3.355 sec
+
+Area Information
+Compute Unit  Kernel Name  Module Name                                                        FF      LUT     DSP  BRAM  URAM
+------------  -----------  -----------------------------------------------------------------  ------  ------  ---  ----  ----
+krnl_lstm_1   krnl_lstm    krnl_lstm_entry3                                                   2       28      0    0     0
+krnl_lstm_1   krnl_lstm    read_input143                                                      10053   1269    0    0     0
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_entry122                                            3       1261    0    0     0
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split2_proc                                   3       87      0    8     0
+krnl_lstm_1   krnl_lstm    krnl_split                                                         6146    2314    0    0     0
+krnl_lstm_1   krnl_lstm    krnl_dot33_entry106                                                3       1189    0    0     0
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_141                                        25      204     0    64    0
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_3142                                       1937    757     0    0     0
+krnl_lstm_1   krnl_lstm    mul_float_4u_unsigned_int_float_5867                               1939    2172    0    0     0
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_6475  1732    1821    0    0     0
+krnl_lstm_1   krnl_lstm    padding_float_4u_unsigned_int_6576                                 18      119     0    0     0
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_postProcess_float_2u_unsigned_int_6677       875     1492    0    0     0
+krnl_lstm_1   krnl_lstm    sum_float_2u_unsigned_int_float_5968                               2823    3569    0    0     0
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_dot_tree_float_2u_unsigned_int_float_5360    4861    5810    0    0     0
+krnl_lstm_1   krnl_lstm    dot4054                                                            4862    5819    0    0     0
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3243_Block_split13_proc93                34      28      0    0     0
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3243                                     4995    5916    0    0     0
+krnl_lstm_1   krnl_lstm    krnl_dot33                                                         13593   12624   0    64    0
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split25_proc                                  492     832     0    0     0
+krnl_lstm_1   krnl_lstm    krnl_lut_sigmoid34                                                 137     612     0    1     0
+krnl_lstm_1   krnl_lstm    krnl_dot35_entry110                                                3       613     0    0     0
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_144                                        25      204     0    64    0
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_3145                                       1937    757     0    0     0
+krnl_lstm_1   krnl_lstm    mul_float_4u_unsigned_int_float_5869                               1939    2172    0    0     0
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_6478  1732    1821    0    0     0
+krnl_lstm_1   krnl_lstm    padding_float_4u_unsigned_int_6579                                 18      119     0    0     0
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_postProcess_float_2u_unsigned_int_6680       875     1492    0    0     0
+krnl_lstm_1   krnl_lstm    sum_float_2u_unsigned_int_float_5970                               2823    3569    0    0     0
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_dot_tree_float_2u_unsigned_int_float_5361    4861    5810    0    0     0
+krnl_lstm_1   krnl_lstm    dot4055                                                            4862    5819    0    0     0
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3246_Block_split13_proc94                34      28      0    0     0
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3246                                     4995    5916    0    0     0
+krnl_lstm_1   krnl_lstm    krnl_dot35                                                         13593   12048   0    64    0
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split29_proc                                  524     841     0    0     0
+krnl_lstm_1   krnl_lstm    krnl_lut_sigmoid36                                                 137     612     0    1     0
+krnl_lstm_1   krnl_lstm    krnl_dot37_entry114                                                3       613     0    0     0
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_147                                        25      204     0    64    0
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_3148                                       1937    757     0    0     0
+krnl_lstm_1   krnl_lstm    mul_float_4u_unsigned_int_float_5871                               1939    2172    0    0     0
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_6481  1732    1821    0    0     0
+krnl_lstm_1   krnl_lstm    padding_float_4u_unsigned_int_6582                                 18      119     0    0     0
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_postProcess_float_2u_unsigned_int_6683       875     1492    0    0     0
+krnl_lstm_1   krnl_lstm    sum_float_2u_unsigned_int_float_5972                               2823    3569    0    0     0
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_dot_tree_float_2u_unsigned_int_float_5362    4861    5810    0    0     0
+krnl_lstm_1   krnl_lstm    dot4056                                                            4862    5819    0    0     0
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3249_Block_split13_proc95                34      28      0    0     0
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3249                                     4995    5916    0    0     0
+krnl_lstm_1   krnl_lstm    krnl_dot37                                                         13593   12048   0    64    0
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split213_proc                                 524     841     0    0     0
+krnl_lstm_1   krnl_lstm    krnl_lut_tanh38                                                    137     621     0    1     0
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split216_proc                                 214     379     0    0     0
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split217_proc                                 34      19      0    0     0
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split218_proc                                 487     795     0    0     0
+krnl_lstm_1   krnl_lstm    krnl_dot39_entry118                                                3       613     0    0     0
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_150                                        25      204     0    64    0
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_3151                                       1937    757     0    0     0
+krnl_lstm_1   krnl_lstm    mul_float_4u_unsigned_int_float_5873                               1939    2172    0    0     0
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_6484  1732    1821    0    0     0
+krnl_lstm_1   krnl_lstm    padding_float_4u_unsigned_int_6585                                 18      119     0    0     0
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_postProcess_float_2u_unsigned_int_6686       875     1492    0    0     0
+krnl_lstm_1   krnl_lstm    sum_float_2u_unsigned_int_float_5974                               2823    3569    0    0     0
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_dot_tree_float_2u_unsigned_int_float_5363    4861    5810    0    0     0
+krnl_lstm_1   krnl_lstm    dot4057                                                            4862    5819    0    0     0
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3252_Block_split13_proc96                34      28      0    0     0
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_3252                                     4995    5916    0    0     0
+krnl_lstm_1   krnl_lstm    krnl_dot39                                                         13593   12048   0    64    0
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split221_proc                                 524     841     0    0     0
+krnl_lstm_1   krnl_lstm    krnl_lut_sigmoid                                                   137     612     0    1     0
+krnl_lstm_1   krnl_lstm    krnl_lut_tanh                                                      137     612     0    1     0
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split225_proc                                 2       19      0    0     0
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit_Block_split226_proc                                 213     375     0    0     0
+krnl_lstm_1   krnl_lstm    krnl_lstm_unit                                                     99563   86736   0    269   0
+krnl_lstm_1   krnl_lstm    copy_array                                                         0       0       0    0     0
+krnl_lstm_1   krnl_lstm    krnl_dot_1_entry139                                                3       604     0    0     0
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_s                                          1938    766     0    0     0
+krnl_lstm_1   krnl_lstm    readVec2Stream_float_4u_2                                          2070    515     0    0     0
+krnl_lstm_1   krnl_lstm    mul_float_4u_unsigned_int_float_s                                  1939    2172    0    0     0
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_preProcess_float_2u_unsigned_int_float_s     1732    1821    0    0     0
+krnl_lstm_1   krnl_lstm    padding_float_4u_unsigned_int_s                                    18      119     0    0     0
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_postProcess_float_2u_unsigned_int_s          875     1492    0    0     0
+krnl_lstm_1   krnl_lstm    sum_float_2u_unsigned_int_float_s                                  2823    3569    0    0     0
+krnl_lstm_1   krnl_lstm    p_anonymous_namespace_dot_tree_float_2u_unsigned_int_float_s       4861    5810    0    0     0
+krnl_lstm_1   krnl_lstm    dot                                                                4862    5819    0    0     0
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_Block_split13_proc97                     34      28      0    0     0
+krnl_lstm_1   krnl_lstm    dot_float_2u_unsigned_int_s                                        4995    5916    0    0     0
+krnl_lstm_1   krnl_lstm    krnl_dot_1                                                         15639   12359   0    0     0
+krnl_lstm_1   krnl_lstm    krnl_lstm_str                                                      128111  105590  0    269   0
+krnl_lstm_1   krnl_lstm    write_output                                                       380     675     0    0     0
+krnl_lstm_1   krnl_lstm    krnl_lstm                                                          140163  109167  0    289   0
+-------------------------------------------------------------------------------

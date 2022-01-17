@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="zc706_sw_lstm" location="/home/jrk/vivado/zc706/sdk/wksp1/zc706_sw_lstm" platform="/home/jrk/vivado/zc706/sdk/wksp1/zc706/export/zc706/zc706.xpfm" platformUID="vendor:lib:design_1:1.0(custom)" systemProject="zc706_sw_lstm_system" sysConfig="zc706" cpu="linux_domain" cpuInstance="cortex-a9" os="linux" language="CPP">
+  <configuration name="Debug" id="xilinx.gnu.armv7.linux.exe.debug.1842119681" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.linux.exe.release.2001937749">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

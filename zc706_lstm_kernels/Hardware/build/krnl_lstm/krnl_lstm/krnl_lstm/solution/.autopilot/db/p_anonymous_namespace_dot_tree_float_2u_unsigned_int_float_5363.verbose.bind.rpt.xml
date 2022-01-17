@@ -1,0 +1,47 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'p_anonymous_namespace_dot_tree_float_2u_unsigned_int_float_5363'" level="0">
+<item name = "Date">Mon May 24 12:51:36 2021
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
+<item name = "Project">krnl_lstm</item>
+<item name = "Solution">solution (Vitis Kernel Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z045-ffg900-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.935 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">98, 98, 0.980 us, 0.980 us, 35, 35, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_mul_float_4u_unsigned_int_float_5873_fu_36">mul_float_4u_unsigned_int_float_5873, 20, 20, 0.200 us, 0.200 us, 20, 20, none</column>
+<column name="grp_sum_float_2u_unsigned_int_float_5974_fu_45">sum_float_2u_unsigned_int_float_5974, 77, 77, 0.770 us, 0.770 us, 35, 35, dataflow</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

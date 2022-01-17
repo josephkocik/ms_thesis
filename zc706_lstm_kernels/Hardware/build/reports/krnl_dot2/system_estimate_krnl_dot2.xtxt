@@ -1,0 +1,39 @@
+===============================================================================
+Version:    v++ v2020.2 (64-bit)
+Build:      SW Build (by xbuild) on 2020-11-18-05:13:29
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Tue Mar  9 12:42:11 2021
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             krnl_dot2
+Target Device:           vendor:lib:design_1:1.0
+Target Clock:            100.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+krnl_dot2    c     fpga0:OCL_REGION_0  krnl_dot2       1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     krnl_dot2
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name  Target Frequency  Estimated Frequency
+------------  -----------  -----------  ----------------  -------------------
+krnl_dot2_1   krnl_dot2    krnl_dot2    100               136.986298
+
+Latency Information
+Compute Unit  Kernel Name  Module Name  Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  -----------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+krnl_dot2_1   krnl_dot2    krnl_dot2    307             306            306           306             3.060 us         3.060 us        3.060 us
+
+Area Information
+Compute Unit  Kernel Name  Module Name  FF    LUT   DSP  BRAM  URAM
+------------  -----------  -----------  ----  ----  ---  ----  ----
+krnl_dot2_1   krnl_dot2    krnl_dot2    7071  9638  0    30    0
+-------------------------------------------------------------------------------

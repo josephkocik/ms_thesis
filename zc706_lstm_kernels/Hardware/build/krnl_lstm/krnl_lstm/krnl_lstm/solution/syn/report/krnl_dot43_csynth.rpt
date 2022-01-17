@@ -1,0 +1,238 @@
+
+
+================================================================
+== Vitis HLS Report for 'krnl_dot43'
+================================================================
+* Date:           Tue Mar 16 16:15:23 2021
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        krnl_lstm
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.157 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |       59|       59|  0.590 us|  0.590 us|   27|   27|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------+--------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
+        |                                   |                                |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+        |              Instance             |             Module             |   min   |   max   |    min    |    max    | min | max |   Type   |
+        +-----------------------------------+--------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
+        |dot_float_5u_unsigned_int_4054_U0  |dot_float_5u_unsigned_int_4054  |       56|       56|   0.560 us|   0.560 us|   27|   27|  dataflow|
+        |readVec2Stream_float_32u_152_U0    |readVec2Stream_float_32u_152    |        1|        1|  10.000 ns|  10.000 ns|    1|    1|      none|
+        |krnl_dot43_entry121_U0             |krnl_dot43_entry121             |        0|        0|       0 ns|       0 ns|    0|    0|      none|
+        |readVec2Stream_float_32u_3953_U0   |readVec2Stream_float_32u_3953   |        0|        0|       0 ns|       0 ns|    0|    0|      none|
+        +-----------------------------------+--------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|       2|    -|
+|FIFO             |        -|    -|    3465|    2380|    -|
+|Instance         |       32|  130|   13301|   18647|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       -|       -|    -|
+|Register         |        -|    -|       -|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |       32|  130|   16766|   21029|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1090|  900|  437200|  218600|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        2|   14|       3|       9|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------+--------------------------------+---------+-----+-------+-------+-----+
+    |              Instance             |             Module             | BRAM_18K| DSP |   FF  |  LUT  | URAM|
+    +-----------------------------------+--------------------------------+---------+-----+-------+-------+-----+
+    |dot_float_5u_unsigned_int_4054_U0  |dot_float_5u_unsigned_int_4054  |        0|  130|  13292|  17965|    0|
+    |krnl_dot43_entry121_U0             |krnl_dot43_entry121             |        0|    0|      3|    325|    0|
+    |readVec2Stream_float_32u_152_U0    |readVec2Stream_float_32u_152    |       32|    0|      4|     50|    0|
+    |readVec2Stream_float_32u_3953_U0   |readVec2Stream_float_32u_3953   |        0|    0|      2|    307|    0|
+    +-----------------------------------+--------------------------------+---------+-----+-------+-------+-----+
+    |Total                              |                                |       32|  130|  13301|  18647|    0|
+    +-----------------------------------+--------------------------------+---------+-----+-------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +--------------------+---------+----+----+-----+------+------+---------+
+    |        Name        | BRAM_18K| FF | LUT| URAM| Depth| Bits | Size:D*B|
+    +--------------------+---------+----+----+-----+------+------+---------+
+    |p_in1_offset_c_i_U  |        0|  99|   0|    -|     2|     6|       12|
+    |p_in2_0_c_i_U       |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_10_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_11_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_12_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_13_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_14_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_15_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_16_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_17_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_18_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_19_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_1_c_i_U       |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_20_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_21_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_22_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_23_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_24_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_25_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_26_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_27_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_28_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_29_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_2_c_i_U       |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_30_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_31_c_i_U      |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_3_c_i_U       |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_4_c_i_U       |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_5_c_i_U       |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_6_c_i_U       |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_7_c_i_U       |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_8_c_i_U       |        0|  99|   0|    -|     2|    32|       64|
+    |p_in2_9_c_i_U       |        0|  99|   0|    -|     2|    32|       64|
+    |str_in1_U           |        0|  99|   0|    -|     2|  1024|     2048|
+    |str_in2_U           |        0|  99|   0|    -|     2|  1024|     2048|
+    +--------------------+---------+----+----+-----+------+------+---------+
+    |Total               |        0|3465|   0|    0|    70|  3078|     6156|
+    +--------------------+---------+----+----+-----+------+------+---------+
+
+    * Expression: 
+    +-------------------------------------+----------+----+---+----+------------+------------+
+    |            Variable Name            | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------+----------+----+---+----+------------+------------+
+    |ap_idle                              |       and|   0|  0|   1|           1|           1|
+    |krnl_dot43_entry121_U0_start_full_n  |       and|   0|  0|   1|           1|           1|
+    +-------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                |          |   0|  0|   2|           2|           2|
+    +-------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++----------------------+-----+-----+------------+--------------+--------------+
+|p_in1_offset_dout     |   in|    6|     ap_fifo|  p_in1_offset|       pointer|
+|p_in1_offset_empty_n  |   in|    1|     ap_fifo|  p_in1_offset|       pointer|
+|p_in1_offset_read     |  out|    1|     ap_fifo|  p_in1_offset|       pointer|
+|p_read                |   in|   32|     ap_none|        p_read|        scalar|
+|p_read_ap_vld         |   in|    1|     ap_none|        p_read|        scalar|
+|p_read1               |   in|   32|     ap_none|       p_read1|        scalar|
+|p_read1_ap_vld        |   in|    1|     ap_none|       p_read1|        scalar|
+|p_read2               |   in|   32|     ap_none|       p_read2|        scalar|
+|p_read2_ap_vld        |   in|    1|     ap_none|       p_read2|        scalar|
+|p_read3               |   in|   32|     ap_none|       p_read3|        scalar|
+|p_read3_ap_vld        |   in|    1|     ap_none|       p_read3|        scalar|
+|p_read4               |   in|   32|     ap_none|       p_read4|        scalar|
+|p_read4_ap_vld        |   in|    1|     ap_none|       p_read4|        scalar|
+|p_read5               |   in|   32|     ap_none|       p_read5|        scalar|
+|p_read5_ap_vld        |   in|    1|     ap_none|       p_read5|        scalar|
+|p_read6               |   in|   32|     ap_none|       p_read6|        scalar|
+|p_read6_ap_vld        |   in|    1|     ap_none|       p_read6|        scalar|
+|p_read7               |   in|   32|     ap_none|       p_read7|        scalar|
+|p_read7_ap_vld        |   in|    1|     ap_none|       p_read7|        scalar|
+|p_read8               |   in|   32|     ap_none|       p_read8|        scalar|
+|p_read8_ap_vld        |   in|    1|     ap_none|       p_read8|        scalar|
+|p_read9               |   in|   32|     ap_none|       p_read9|        scalar|
+|p_read9_ap_vld        |   in|    1|     ap_none|       p_read9|        scalar|
+|p_read10              |   in|   32|     ap_none|      p_read10|        scalar|
+|p_read10_ap_vld       |   in|    1|     ap_none|      p_read10|        scalar|
+|p_read11              |   in|   32|     ap_none|      p_read11|        scalar|
+|p_read11_ap_vld       |   in|    1|     ap_none|      p_read11|        scalar|
+|p_read12              |   in|   32|     ap_none|      p_read12|        scalar|
+|p_read12_ap_vld       |   in|    1|     ap_none|      p_read12|        scalar|
+|p_read13              |   in|   32|     ap_none|      p_read13|        scalar|
+|p_read13_ap_vld       |   in|    1|     ap_none|      p_read13|        scalar|
+|p_read14              |   in|   32|     ap_none|      p_read14|        scalar|
+|p_read14_ap_vld       |   in|    1|     ap_none|      p_read14|        scalar|
+|p_read15              |   in|   32|     ap_none|      p_read15|        scalar|
+|p_read15_ap_vld       |   in|    1|     ap_none|      p_read15|        scalar|
+|p_read16              |   in|   32|     ap_none|      p_read16|        scalar|
+|p_read16_ap_vld       |   in|    1|     ap_none|      p_read16|        scalar|
+|p_read17              |   in|   32|     ap_none|      p_read17|        scalar|
+|p_read17_ap_vld       |   in|    1|     ap_none|      p_read17|        scalar|
+|p_read18              |   in|   32|     ap_none|      p_read18|        scalar|
+|p_read18_ap_vld       |   in|    1|     ap_none|      p_read18|        scalar|
+|p_read19              |   in|   32|     ap_none|      p_read19|        scalar|
+|p_read19_ap_vld       |   in|    1|     ap_none|      p_read19|        scalar|
+|p_read20              |   in|   32|     ap_none|      p_read20|        scalar|
+|p_read20_ap_vld       |   in|    1|     ap_none|      p_read20|        scalar|
+|p_read21              |   in|   32|     ap_none|      p_read21|        scalar|
+|p_read21_ap_vld       |   in|    1|     ap_none|      p_read21|        scalar|
+|p_read22              |   in|   32|     ap_none|      p_read22|        scalar|
+|p_read22_ap_vld       |   in|    1|     ap_none|      p_read22|        scalar|
+|p_read23              |   in|   32|     ap_none|      p_read23|        scalar|
+|p_read23_ap_vld       |   in|    1|     ap_none|      p_read23|        scalar|
+|p_read24              |   in|   32|     ap_none|      p_read24|        scalar|
+|p_read24_ap_vld       |   in|    1|     ap_none|      p_read24|        scalar|
+|p_read25              |   in|   32|     ap_none|      p_read25|        scalar|
+|p_read25_ap_vld       |   in|    1|     ap_none|      p_read25|        scalar|
+|p_read26              |   in|   32|     ap_none|      p_read26|        scalar|
+|p_read26_ap_vld       |   in|    1|     ap_none|      p_read26|        scalar|
+|p_read27              |   in|   32|     ap_none|      p_read27|        scalar|
+|p_read27_ap_vld       |   in|    1|     ap_none|      p_read27|        scalar|
+|p_read28              |   in|   32|     ap_none|      p_read28|        scalar|
+|p_read28_ap_vld       |   in|    1|     ap_none|      p_read28|        scalar|
+|p_read29              |   in|   32|     ap_none|      p_read29|        scalar|
+|p_read29_ap_vld       |   in|    1|     ap_none|      p_read29|        scalar|
+|p_read30              |   in|   32|     ap_none|      p_read30|        scalar|
+|p_read30_ap_vld       |   in|    1|     ap_none|      p_read30|        scalar|
+|p_read31              |   in|   32|     ap_none|      p_read31|        scalar|
+|p_read31_ap_vld       |   in|    1|     ap_none|      p_read31|        scalar|
+|p_output              |  out|   32|      ap_vld|      p_output|       pointer|
+|p_output_ap_vld       |  out|    1|      ap_vld|      p_output|       pointer|
+|ap_clk                |   in|    1|  ap_ctrl_hs|    krnl_dot43|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|    krnl_dot43|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|    krnl_dot43|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|    krnl_dot43|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|    krnl_dot43|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|    krnl_dot43|  return value|
+|ap_continue           |   in|    1|  ap_ctrl_hs|    krnl_dot43|  return value|
++----------------------+-----+-----+------------+--------------+--------------+
+

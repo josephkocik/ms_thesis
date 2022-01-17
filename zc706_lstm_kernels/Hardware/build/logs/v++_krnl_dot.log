@@ -1,0 +1,26 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/reports/krnl_dot
+	Log files: /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/logs/krnl_dot
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/krnl_dot.xo.compile_summary, at Tue Mar  9 12:44:05 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Mar  9 12:44:05 2021
+INFO: [v++ 60-895]   Target platform: /home/jrk/vivado/zc706/sdk/wksp1/zc706/export/zc706/zc706.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home/jrk/vivado/zc706/sdk/wksp1/zc706/export/zc706/hw/zc706.xsa'
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: zc706
+INFO: [v++ 60-242] Creating kernel: 'krnl_dot'
+
+===>The following messages were generated while  performing high-level synthesis for kernel: krnl_dot Log file: /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/krnl_dot/krnl_dot/vitis_hls.log :
+ERROR: [v++ 200-1013] Bundled bus interface gmem failed dataflow checking: it cannot read data in multiple processes.
+ERROR: [v++ 200-984] Bundled bus interface gmem has read operations in function:  'xf::blas::readVec2Stream<float, 32u>9' (/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:62:22) and 'xf::blas::readVec2Stream<float, 32u>' (/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:62:22).
+
+ERROR: [v++ 200-1013] Bundled bus interface gmem failed dataflow checking: it cannot read data in multiple processes.
+ERROR: [v++ 200-984] Bundled bus interface gmem has read operations in function:  'xf::blas::readVec2Stream<float, 32u>9' (/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:62:22) and 'xf::blas::readVec2Stream<float, 32u>' (/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:62:22).
+
+ERROR: [v++ 200-70] Pre-synthesis failed.
+ERROR: [v++ 60-300] Failed to build kernel(ip) krnl_dot, see log for details: /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/krnl_dot/krnl_dot/vitis_hls.log
+ERROR: [v++ 60-773] In '/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/krnl_dot/krnl_dot/vitis_hls.log', caught Tcl error: ERROR: [HLS 200-1013] Bundled bus interface gmem failed dataflow checking: it cannot read data in multiple processes.
+ERROR: [v++ 60-773] In '/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/krnl_dot/krnl_dot/vitis_hls.log', caught Tcl error: ERROR: [HLS 200-984] Bundled bus interface gmem has read operations in function:  'xf::blas::readVec2Stream<float, 32u>9' (/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:62:22) and 'xf::blas::readVec2Stream<float, 32u>' (/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:62:22).
+ERROR: [v++ 60-773] In '/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/krnl_dot/krnl_dot/vitis_hls.log', caught Tcl error: ERROR: [HLS 200-70] Pre-synthesis failed.
+ERROR: [v++ 60-599] Kernel compilation failed to complete
+ERROR: [v++ 60-592] Failed to finish compilation
+INFO: [v++ 60-1653] Closing dispatch client.

@@ -1,0 +1,132 @@
+
+
+================================================================
+== Vitis HLS Report for 'constructor'
+================================================================
+* Date:           Tue Mar 16 16:15:09 2021
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        krnl_lstm
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|      0 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       -|       -|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|    -|       -|       -|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       -|       -|    -|
+|Register         |        -|    -|       -|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|    0|       0|       0|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1090|  900|  437200|  218600|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|    0|       0|       0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------+-----+------+------------+--------------+--------------+
+|   RTL Ports  | Dir | Bits |  Protocol  | Source Object|    C Type    |
++--------------+-----+------+------------+--------------+--------------+
+|ap_ready      |  out|     1|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_0   |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_1   |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_2   |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_3   |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_4   |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_5   |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_6   |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_7   |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_8   |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_9   |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_10  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_11  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_12  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_13  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_14  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_15  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_16  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_17  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_18  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_19  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_20  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_21  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_22  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_23  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_24  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_25  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_26  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_27  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_28  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_29  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_30  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|ap_return_31  |  out|    32|  ap_ctrl_hs|   constructor|  return value|
+|p_val_V_read  |   in|  1024|     ap_none|  p_val_V_read|        scalar|
++--------------+-----+------+------------+--------------+--------------+
+

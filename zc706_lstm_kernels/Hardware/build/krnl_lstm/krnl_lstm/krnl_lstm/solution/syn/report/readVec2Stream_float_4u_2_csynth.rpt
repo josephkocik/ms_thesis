@@ -1,0 +1,204 @@
+
+
+================================================================
+== Vitis HLS Report for 'readVec2Stream_float_4u_2'
+================================================================
+* Date:           Mon May 24 12:53:38 2021
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        krnl_lstm
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.156 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       16|       16|  0.160 us|  0.160 us|   16|   16|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|       1|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|    -|       -|       -|    -|
+|Memory           |        0|    -|    2048|     320|    -|
+|Multiplexer      |        -|    -|       -|     194|    -|
+|Register         |        -|    -|      22|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|    0|    2070|     515|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1090|  900|  437200|  218600|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|    0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +--------+--------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    | Memory |             Module             | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +--------+--------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |W_0_U   |readVec2Stream_float_4u_2_W_0   |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_1_U   |readVec2Stream_float_4u_2_W_1   |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_10_U  |readVec2Stream_float_4u_2_W_10  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_11_U  |readVec2Stream_float_4u_2_W_11  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_12_U  |readVec2Stream_float_4u_2_W_12  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_13_U  |readVec2Stream_float_4u_2_W_13  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_14_U  |readVec2Stream_float_4u_2_W_14  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_15_U  |readVec2Stream_float_4u_2_W_15  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_16_U  |readVec2Stream_float_4u_2_W_16  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_17_U  |readVec2Stream_float_4u_2_W_17  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_18_U  |readVec2Stream_float_4u_2_W_18  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_19_U  |readVec2Stream_float_4u_2_W_19  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_2_U   |readVec2Stream_float_4u_2_W_2   |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_20_U  |readVec2Stream_float_4u_2_W_20  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_21_U  |readVec2Stream_float_4u_2_W_21  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_22_U  |readVec2Stream_float_4u_2_W_22  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_23_U  |readVec2Stream_float_4u_2_W_23  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_24_U  |readVec2Stream_float_4u_2_W_24  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_25_U  |readVec2Stream_float_4u_2_W_25  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_26_U  |readVec2Stream_float_4u_2_W_26  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_27_U  |readVec2Stream_float_4u_2_W_27  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_28_U  |readVec2Stream_float_4u_2_W_28  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_29_U  |readVec2Stream_float_4u_2_W_29  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_3_U   |readVec2Stream_float_4u_2_W_3   |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_30_U  |readVec2Stream_float_4u_2_W_30  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_31_U  |readVec2Stream_float_4u_2_W_31  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_32_U  |readVec2Stream_float_4u_2_W_32  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_33_U  |readVec2Stream_float_4u_2_W_33  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_34_U  |readVec2Stream_float_4u_2_W_34  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_35_U  |readVec2Stream_float_4u_2_W_35  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_36_U  |readVec2Stream_float_4u_2_W_36  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_37_U  |readVec2Stream_float_4u_2_W_37  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_38_U  |readVec2Stream_float_4u_2_W_38  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_39_U  |readVec2Stream_float_4u_2_W_39  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_4_U   |readVec2Stream_float_4u_2_W_4   |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_40_U  |readVec2Stream_float_4u_2_W_40  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_41_U  |readVec2Stream_float_4u_2_W_41  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_42_U  |readVec2Stream_float_4u_2_W_42  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_43_U  |readVec2Stream_float_4u_2_W_43  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_44_U  |readVec2Stream_float_4u_2_W_44  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_45_U  |readVec2Stream_float_4u_2_W_45  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_46_U  |readVec2Stream_float_4u_2_W_46  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_47_U  |readVec2Stream_float_4u_2_W_47  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_48_U  |readVec2Stream_float_4u_2_W_48  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_49_U  |readVec2Stream_float_4u_2_W_49  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_5_U   |readVec2Stream_float_4u_2_W_5   |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_50_U  |readVec2Stream_float_4u_2_W_50  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_51_U  |readVec2Stream_float_4u_2_W_51  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_52_U  |readVec2Stream_float_4u_2_W_52  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_53_U  |readVec2Stream_float_4u_2_W_53  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_54_U  |readVec2Stream_float_4u_2_W_54  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_55_U  |readVec2Stream_float_4u_2_W_55  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_56_U  |readVec2Stream_float_4u_2_W_56  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_57_U  |readVec2Stream_float_4u_2_W_57  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_58_U  |readVec2Stream_float_4u_2_W_58  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_59_U  |readVec2Stream_float_4u_2_W_59  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_6_U   |readVec2Stream_float_4u_2_W_6   |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_60_U  |readVec2Stream_float_4u_2_W_60  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_61_U  |readVec2Stream_float_4u_2_W_61  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_62_U  |readVec2Stream_float_4u_2_W_62  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_63_U  |readVec2Stream_float_4u_2_W_63  |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_7_U   |readVec2Stream_float_4u_2_W_7   |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_8_U   |readVec2Stream_float_4u_2_W_8   |        0|  32|   5|    0|    10|   32|     1|          320|
+    |W_9_U   |readVec2Stream_float_4u_2_W_9   |        0|  32|   5|    0|    10|   32|     1|          320|
+    +--------+--------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total   |                                |        0|2048| 320|    0|   640| 2048|    64|        20480|
+    +--------+--------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   1|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   1|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------+----+-----------+-----+-----------+
+    |        Name       | LUT| Input Size| Bits| Total Bits|
+    +-------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm          |  86|         18|    1|         18|
+    |ap_done            |   9|          2|    1|          2|
+    |p_in_offset_blk_n  |   9|          2|    1|          2|
+    |str_in12_blk_n     |   9|          2|    1|          2|
+    |str_in12_din       |  81|         17|  128|       2176|
+    +-------------------+----+-----------+-----+-----------+
+    |Total              | 194|         41|  132|       2200|
+    +-------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |  17|   0|   17|          0|
+    |ap_done_reg                  |   1|   0|    1|          0|
+    |p_in_offset_cast_i_reg_1473  |   4|   0|   32|         28|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        |  22|   0|   50|         28|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+-----------------------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  |        Source Object        |    C Type    |
++---------------------+-----+-----+------------+-----------------------------+--------------+
+|ap_clk               |   in|    1|  ap_ctrl_hs|  readVec2Stream<float, 4u>.2|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|  readVec2Stream<float, 4u>.2|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|  readVec2Stream<float, 4u>.2|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|  readVec2Stream<float, 4u>.2|  return value|
+|ap_continue          |   in|    1|  ap_ctrl_hs|  readVec2Stream<float, 4u>.2|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|  readVec2Stream<float, 4u>.2|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|  readVec2Stream<float, 4u>.2|  return value|
+|str_in12_din         |  out|  128|     ap_fifo|                     str_in12|       pointer|
+|str_in12_full_n      |   in|    1|     ap_fifo|                     str_in12|       pointer|
+|str_in12_write       |  out|    1|     ap_fifo|                     str_in12|       pointer|
+|p_in_offset_dout     |   in|    4|     ap_fifo|                  p_in_offset|       pointer|
+|p_in_offset_empty_n  |   in|    1|     ap_fifo|                  p_in_offset|       pointer|
+|p_in_offset_read     |  out|    1|     ap_fifo|                  p_in_offset|       pointer|
++---------------------+-----+-----+------------+-----------------------------+--------------+
+

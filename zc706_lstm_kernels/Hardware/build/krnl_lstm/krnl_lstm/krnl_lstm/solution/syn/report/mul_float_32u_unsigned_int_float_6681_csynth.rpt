@@ -1,0 +1,221 @@
+
+
+================================================================
+== Vitis HLS Report for 'mul_float_32u_unsigned_int_float_6681'
+================================================================
+* Date:           Tue Mar 16 16:15:37 2021
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        krnl_lstm
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.027 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        5|        5|  50.000 ns|  50.000 ns|    5|    5|     none|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------+-------------+---------+---------+----------+----------+-----+-----+---------+
+        |                             |             |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |           Instance          |    Module   |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-----------------------------+-------------+---------+---------+----------+----------+-----+-----+---------+
+        |call_ret1_constructor_fu_41  |constructor  |        0|        0|      0 ns|      0 ns|    0|    0|     none|
+        |call_ret_constructor_fu_46   |constructor  |        0|        0|      0 ns|      0 ns|    0|    0|     none|
+        +-----------------------------+-------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|       1|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|   96|    4576|   10304|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       -|      74|    -|
+|Register         |        -|    -|    3080|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|   96|    7656|   10379|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1090|  900|  437200|  218600|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|   10|       1|       4|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------+-------------------------------+---------+----+-----+-----+-----+
+    |               Instance              |             Module            | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-------------------------------------+-------------------------------+---------+----+-----+-----+-----+
+    |call_ret1_constructor_fu_41          |constructor                    |        0|   0|    0|    0|    0|
+    |call_ret_constructor_fu_46           |constructor                    |        0|   0|    0|    0|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1196  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1197  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1198  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1199  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1200  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1201  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1202  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1203  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1204  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1205  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1206  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1207  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1208  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1209  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1210  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1211  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1212  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1213  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1214  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1215  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1216  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1217  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1218  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1219  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1220  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1221  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1222  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1223  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1224  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1225  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1226  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U1227  |fmul_32ns_32ns_32_4_max_dsp_1  |        0|   3|  143|  322|    0|
+    +-------------------------------------+-------------------------------+---------+----+-----+-----+-----+
+    |Total                                |                               |        0|  96| 4576|10304|    0|
+    +-------------------------------------+-------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   1|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   1|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------+----+-----------+-----+-----------+
+    |       Name      | LUT| Input Size| Bits| Total Bits|
+    +-----------------+----+-----------+-----+-----------+
+    |ap_NS_fsm        |  29|          7|    1|          7|
+    |ap_done          |   9|          2|    1|          2|
+    |l_mulStr1_blk_n  |   9|          2|    1|          2|
+    |real_start       |   9|          2|    1|          2|
+    |str_in12_blk_n   |   9|          2|    1|          2|
+    |str_in23_blk_n   |   9|          2|    1|          2|
+    +-----------------+----+-----------+-----+-----------+
+    |Total            |  74|         17|    6|         17|
+    +-----------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------+------+----+------+-----------+
+    |       Name      |  FF  | LUT| Bits | Const Bits|
+    +-----------------+------+----+------+-----------+
+    |ap_CS_fsm        |     6|   0|     6|          0|
+    |ap_done_reg      |     1|   0|     1|          0|
+    |mul_10_reg_1049  |    32|   0|    32|          0|
+    |mul_11_reg_1054  |    32|   0|    32|          0|
+    |mul_12_reg_1059  |    32|   0|    32|          0|
+    |mul_13_reg_1064  |    32|   0|    32|          0|
+    |mul_14_reg_1069  |    32|   0|    32|          0|
+    |mul_15_reg_1074  |    32|   0|    32|          0|
+    |mul_16_reg_1079  |    32|   0|    32|          0|
+    |mul_17_reg_1084  |    32|   0|    32|          0|
+    |mul_18_reg_1089  |    32|   0|    32|          0|
+    |mul_19_reg_1094  |    32|   0|    32|          0|
+    |mul_1_reg_999    |    32|   0|    32|          0|
+    |mul_20_reg_1099  |    32|   0|    32|          0|
+    |mul_21_reg_1104  |    32|   0|    32|          0|
+    |mul_22_reg_1109  |    32|   0|    32|          0|
+    |mul_23_reg_1114  |    32|   0|    32|          0|
+    |mul_24_reg_1119  |    32|   0|    32|          0|
+    |mul_25_reg_1124  |    32|   0|    32|          0|
+    |mul_26_reg_1129  |    32|   0|    32|          0|
+    |mul_27_reg_1134  |    32|   0|    32|          0|
+    |mul_28_reg_1139  |    32|   0|    32|          0|
+    |mul_29_reg_1144  |    32|   0|    32|          0|
+    |mul_2_reg_1004   |    32|   0|    32|          0|
+    |mul_30_reg_1149  |    32|   0|    32|          0|
+    |mul_3_reg_1009   |    32|   0|    32|          0|
+    |mul_4_reg_1014   |    32|   0|    32|          0|
+    |mul_5_reg_1019   |    32|   0|    32|          0|
+    |mul_6_reg_1024   |    32|   0|    32|          0|
+    |mul_7_reg_1029   |    32|   0|    32|          0|
+    |mul_8_reg_1034   |    32|   0|    32|          0|
+    |mul_9_reg_1039   |    32|   0|    32|          0|
+    |mul_reg_994      |    32|   0|    32|          0|
+    |mul_s_reg_1044   |    32|   0|    32|          0|
+    |start_once_reg   |     1|   0|     1|          0|
+    |tmp_V_1_reg_669  |  1024|   0|  1024|          0|
+    |tmp_V_reg_664    |  1024|   0|  1024|          0|
+    +-----------------+------+----+------+-----------+
+    |Total            |  3080|   0|  3080|          0|
+    +-----------------+------+----+------+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+------+------------+------------------------------------------+--------------+
+|     RTL Ports    | Dir | Bits |  Protocol  |               Source Object              |    C Type    |
++------------------+-----+------+------------+------------------------------------------+--------------+
+|ap_clk            |   in|     1|  ap_ctrl_hs|  mul<float, 32u, unsigned int, float>6681|  return value|
+|ap_rst            |   in|     1|  ap_ctrl_hs|  mul<float, 32u, unsigned int, float>6681|  return value|
+|ap_start          |   in|     1|  ap_ctrl_hs|  mul<float, 32u, unsigned int, float>6681|  return value|
+|start_full_n      |   in|     1|  ap_ctrl_hs|  mul<float, 32u, unsigned int, float>6681|  return value|
+|ap_done           |  out|     1|  ap_ctrl_hs|  mul<float, 32u, unsigned int, float>6681|  return value|
+|ap_continue       |   in|     1|  ap_ctrl_hs|  mul<float, 32u, unsigned int, float>6681|  return value|
+|ap_idle           |  out|     1|  ap_ctrl_hs|  mul<float, 32u, unsigned int, float>6681|  return value|
+|ap_ready          |  out|     1|  ap_ctrl_hs|  mul<float, 32u, unsigned int, float>6681|  return value|
+|start_out         |  out|     1|  ap_ctrl_hs|  mul<float, 32u, unsigned int, float>6681|  return value|
+|start_write       |  out|     1|  ap_ctrl_hs|  mul<float, 32u, unsigned int, float>6681|  return value|
+|str_in12_dout     |   in|  1024|     ap_fifo|                                  str_in12|       pointer|
+|str_in12_empty_n  |   in|     1|     ap_fifo|                                  str_in12|       pointer|
+|str_in12_read     |  out|     1|     ap_fifo|                                  str_in12|       pointer|
+|str_in23_dout     |   in|  1024|     ap_fifo|                                  str_in23|       pointer|
+|str_in23_empty_n  |   in|     1|     ap_fifo|                                  str_in23|       pointer|
+|str_in23_read     |  out|     1|     ap_fifo|                                  str_in23|       pointer|
+|l_mulStr1_din     |  out|  1024|     ap_fifo|                                 l_mulStr1|       pointer|
+|l_mulStr1_full_n  |   in|     1|     ap_fifo|                                 l_mulStr1|       pointer|
+|l_mulStr1_write   |  out|     1|     ap_fifo|                                 l_mulStr1|       pointer|
++------------------+-----+------+------------+------------------------------------------+--------------+
+

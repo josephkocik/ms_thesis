@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: krnl_lstm
+Log file: /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/krnl_lstm/krnl_lstm/vitis_hls.log

@@ -1,0 +1,232 @@
+<ENTRY>
+{
+ "thisFile": "/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/krnl_lstm.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon May 24 12:48:10 2021",
+ "timestampMillis": "1621874890859",
+ "buildStep": {
+  "cmdId": "ad8ac496-0264-4489-ad58-5ab127bfaea8",
+  "name": "v++",
+  "logFile": "/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/krnl_lstm/krnl_lstm.steps.log",
+  "commandLine": "/home/jrk/tools/Xilinx/Vitis/2020.2/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target hw --compile -I../src --config krnl_lstm-compile.cfg -I/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw -obuild/krnl_lstm.xo ../src/krnl_lstm.cpp ",
+  "args": [
+   "--target",
+   "hw",
+   "--compile",
+   "-I../src",
+   "--config",
+   "krnl_lstm-compile.cfg",
+   "-I/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw",
+   "-obuild/krnl_lstm.xo",
+   "../src/krnl_lstm.cpp"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/krnl_lstm-compile.cfg",
+    "content": "platform=/home/jrk/vivado/zc706/sdk/wksp1/zc706/export/zc706/zc706.xpfm\nsave-temps=1\nkernel=krnl_lstm\nmessageDb=build/krnl_lstm.mdb\ntemp_dir=build\nreport_dir=build/reports\nlog_dir=build/logs\n\n[advanced]\nmisc=solution_name=krnl_lstm\n"
+   }
+  ],
+  "cwd": "/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon May 24 12:48:10 2021",
+ "timestampMillis": "1621874890860",
+ "status": {
+  "cmdId": "ad8ac496-0264-4489-ad58-5ab127bfaea8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon May 24 12:48:11 2021",
+ "timestampMillis": "1621874891214",
+ "buildSummary": {
+  "hardwarePlatform": "zc706.xpfm",
+  "hardwareDsa": "zc706.xsa",
+  "platformDirectory": "/home/jrk/vivado/zc706/sdk/wksp1/zc706/export/zc706",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "krnl_lstm",
+     "file": "/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/krnl_lstm.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/src/krnl_lstm.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2020.2. SW Build (by xbuild) on 2020-11-18-05:13:29"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon May 24 12:48:11 2021",
+ "timestampMillis": "1621874891223",
+ "buildStep": {
+  "cmdId": "0cd2ad1b-2427-4afe-a9cb-05232f3b463c",
+  "name": "vitis_hls",
+  "logFile": "/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/krnl_lstm/krnl_lstm/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/krnl_lstm/krnl_lstm/krnl_lstm.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/krnl_lstm/krnl_lstm/krnl_lstm.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon May 24 12:48:11 2021",
+ "timestampMillis": "1621874891224",
+ "status": {
+  "cmdId": "0cd2ad1b-2427-4afe-a9cb-05232f3b463c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon May 24 12:59:51 2021",
+ "timestampMillis": "1621875591013",
+ "status": {
+  "cmdId": "0cd2ad1b-2427-4afe-a9cb-05232f3b463c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon May 24 12:59:51 2021",
+ "timestampMillis": "1621875591154",
+ "report": {
+  "path": "/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/krnl_lstm/krnl_lstm/krnl_lstm/solution/.autopilot/db/krnl_lstm.design.xml",
+  "name": "krnl_lstm",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon May 24 12:59:51 2021",
+ "timestampMillis": "1621875591154",
+ "report": {
+  "path": "/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/krnl_lstm/krnl_lstm/krnl_lstm/solution/.autopilot/db/.message_syn.xml",
+  "name": "krnl_lstm",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon May 24 12:59:51 2021",
+ "timestampMillis": "1621875591155",
+ "report": {
+  "path": "/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/reports/krnl_lstm/hls_reports/krnl_lstm_csynth.rpt",
+  "name": "krnl_lstm",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon May 24 12:59:51 2021",
+ "timestampMillis": "1621875591155",
+ "report": {
+  "path": "/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/krnl_lstm/krnl_lstm/krnl_lstm/solution/syn/report/krnl_lstm_csynth.xml",
+  "name": "krnl_lstm",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon May 24 12:59:51 2021",
+ "timestampMillis": "1621875591240",
+ "report": {
+  "path": "/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/build/reports/krnl_lstm/system_estimate_krnl_lstm.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon May 24 12:59:52 2021",
+ "timestampMillis": "1621875592082",
+ "report": {
+  "path": "/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon May 24 12:59:52 2021",
+ "timestampMillis": "1621875592083",
+ "report": {
+  "path": "/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/Hardware/guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon May 24 12:59:52 2021",
+ "timestampMillis": "1621875592083",
+ "status": {
+  "cmdId": "ad8ac496-0264-4489-ad58-5ab127bfaea8",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

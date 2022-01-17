@@ -1,0 +1,537 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_preProcess_float_5u_unsigned_int_float_s'
+================================================================
+* Date:           Tue Mar 16 16:14:38 2021
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        krnl_lstm
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.329 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       26|       26|  0.260 us|  0.260 us|   26|   26|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 27
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.40>
+ST_1 : Operation 28 [1/1] (3.40ns)   --->   "%tmp_V = read i1024 @_ssdm_op_Read.ap_fifo.volatile.i1024P0A, i1024 %l_mulStr1" [/home/jrk/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 28 'read' 'tmp_V' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1024> <Depth = 2> <FIFO>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%l_val = trunc i1024 %tmp_V"   --->   Operation 29 'trunc' 'l_val' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%l_val_156 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 32, i32 63"   --->   Operation 30 'partselect' 'l_val_156' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%l_val_157 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 64, i32 95"   --->   Operation 31 'partselect' 'l_val_157' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%l_val_158 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 96, i32 127"   --->   Operation 32 'partselect' 'l_val_158' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%l_val_159 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 128, i32 159"   --->   Operation 33 'partselect' 'l_val_159' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%l_val_160 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 160, i32 191"   --->   Operation 34 'partselect' 'l_val_160' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%l_val_161 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 192, i32 223"   --->   Operation 35 'partselect' 'l_val_161' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%l_val_162 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 224, i32 255"   --->   Operation 36 'partselect' 'l_val_162' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%l_val_163 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 256, i32 287"   --->   Operation 37 'partselect' 'l_val_163' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%l_val_164 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 288, i32 319"   --->   Operation 38 'partselect' 'l_val_164' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%l_val_165 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 320, i32 351"   --->   Operation 39 'partselect' 'l_val_165' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%l_val_166 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 352, i32 383"   --->   Operation 40 'partselect' 'l_val_166' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%l_val_167 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 384, i32 415"   --->   Operation 41 'partselect' 'l_val_167' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%l_val_168 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 416, i32 447"   --->   Operation 42 'partselect' 'l_val_168' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%l_val_169 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 448, i32 479"   --->   Operation 43 'partselect' 'l_val_169' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%l_val_170 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 480, i32 511"   --->   Operation 44 'partselect' 'l_val_170' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%l_val_171 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 512, i32 543"   --->   Operation 45 'partselect' 'l_val_171' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%l_val_172 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 544, i32 575"   --->   Operation 46 'partselect' 'l_val_172' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%l_val_173 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 576, i32 607"   --->   Operation 47 'partselect' 'l_val_173' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%l_val_174 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 608, i32 639"   --->   Operation 48 'partselect' 'l_val_174' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%l_val_175 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 640, i32 671"   --->   Operation 49 'partselect' 'l_val_175' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%l_val_176 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 672, i32 703"   --->   Operation 50 'partselect' 'l_val_176' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%l_val_177 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 704, i32 735"   --->   Operation 51 'partselect' 'l_val_177' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%l_val_178 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 736, i32 767"   --->   Operation 52 'partselect' 'l_val_178' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%l_val_179 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 768, i32 799"   --->   Operation 53 'partselect' 'l_val_179' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%l_val_180 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 800, i32 831"   --->   Operation 54 'partselect' 'l_val_180' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%l_val_181 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 832, i32 863"   --->   Operation 55 'partselect' 'l_val_181' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%l_val_182 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 864, i32 895"   --->   Operation 56 'partselect' 'l_val_182' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%l_val_183 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 896, i32 927"   --->   Operation 57 'partselect' 'l_val_183' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%l_val_184 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 928, i32 959"   --->   Operation 58 'partselect' 'l_val_184' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%l_val_185 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 960, i32 991"   --->   Operation 59 'partselect' 'l_val_185' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%l_val_186 = partselect i32 @_ssdm_op_PartSelect.i32.i1024.i32.i32, i1024 %tmp_V, i32 992, i32 1023"   --->   Operation 60 'partselect' 'l_val_186' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 6.32>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%bitcast_ln102 = bitcast i32 %l_val" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 61 'bitcast' 'bitcast_ln102' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%bitcast_ln102_32 = bitcast i32 %l_val_156" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 62 'bitcast' 'bitcast_ln102_32' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%bitcast_ln102_33 = bitcast i32 %l_val_157" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 63 'bitcast' 'bitcast_ln102_33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%bitcast_ln102_34 = bitcast i32 %l_val_158" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 64 'bitcast' 'bitcast_ln102_34' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%bitcast_ln102_35 = bitcast i32 %l_val_159" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 65 'bitcast' 'bitcast_ln102_35' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%bitcast_ln102_36 = bitcast i32 %l_val_160" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 66 'bitcast' 'bitcast_ln102_36' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%bitcast_ln102_37 = bitcast i32 %l_val_161" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 67 'bitcast' 'bitcast_ln102_37' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%bitcast_ln102_38 = bitcast i32 %l_val_162" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 68 'bitcast' 'bitcast_ln102_38' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%bitcast_ln102_39 = bitcast i32 %l_val_163" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 69 'bitcast' 'bitcast_ln102_39' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%bitcast_ln102_40 = bitcast i32 %l_val_164" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 70 'bitcast' 'bitcast_ln102_40' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%bitcast_ln102_41 = bitcast i32 %l_val_165" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 71 'bitcast' 'bitcast_ln102_41' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%bitcast_ln102_42 = bitcast i32 %l_val_166" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 72 'bitcast' 'bitcast_ln102_42' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%bitcast_ln102_43 = bitcast i32 %l_val_167" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 73 'bitcast' 'bitcast_ln102_43' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%bitcast_ln102_44 = bitcast i32 %l_val_168" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 74 'bitcast' 'bitcast_ln102_44' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%bitcast_ln102_45 = bitcast i32 %l_val_169" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 75 'bitcast' 'bitcast_ln102_45' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%bitcast_ln102_46 = bitcast i32 %l_val_170" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 76 'bitcast' 'bitcast_ln102_46' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%bitcast_ln102_47 = bitcast i32 %l_val_171" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 77 'bitcast' 'bitcast_ln102_47' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%bitcast_ln102_48 = bitcast i32 %l_val_172" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 78 'bitcast' 'bitcast_ln102_48' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "%bitcast_ln102_49 = bitcast i32 %l_val_173" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 79 'bitcast' 'bitcast_ln102_49' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%bitcast_ln102_50 = bitcast i32 %l_val_174" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 80 'bitcast' 'bitcast_ln102_50' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%bitcast_ln102_51 = bitcast i32 %l_val_175" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 81 'bitcast' 'bitcast_ln102_51' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%bitcast_ln102_52 = bitcast i32 %l_val_176" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 82 'bitcast' 'bitcast_ln102_52' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%bitcast_ln102_53 = bitcast i32 %l_val_177" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 83 'bitcast' 'bitcast_ln102_53' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%bitcast_ln102_54 = bitcast i32 %l_val_178" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 84 'bitcast' 'bitcast_ln102_54' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "%bitcast_ln102_55 = bitcast i32 %l_val_179" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 85 'bitcast' 'bitcast_ln102_55' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%bitcast_ln102_56 = bitcast i32 %l_val_180" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 86 'bitcast' 'bitcast_ln102_56' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "%bitcast_ln102_57 = bitcast i32 %l_val_181" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 87 'bitcast' 'bitcast_ln102_57' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%bitcast_ln102_58 = bitcast i32 %l_val_182" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 88 'bitcast' 'bitcast_ln102_58' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 89 [1/1] (0.00ns)   --->   "%bitcast_ln102_59 = bitcast i32 %l_val_183" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 89 'bitcast' 'bitcast_ln102_59' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 90 [1/1] (0.00ns)   --->   "%bitcast_ln102_60 = bitcast i32 %l_val_184" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 90 'bitcast' 'bitcast_ln102_60' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%bitcast_ln102_61 = bitcast i32 %l_val_185" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 91 'bitcast' 'bitcast_ln102_61' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%bitcast_ln102_62 = bitcast i32 %l_val_186" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/types.hpp:102]   --->   Operation 92 'bitcast' 'bitcast_ln102_62' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 93 [5/5] (6.32ns)   --->   "%add_i_i_i_i_i = fadd i32 %bitcast_ln102, i32 %bitcast_ln102_32" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 93 'fadd' 'add_i_i_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 94 [5/5] (6.32ns)   --->   "%add_i2_i_i_i_i = fadd i32 %bitcast_ln102_33, i32 %bitcast_ln102_34" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 94 'fadd' 'add_i2_i_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 95 [5/5] (6.32ns)   --->   "%add_i_i2_i_i_i = fadd i32 %bitcast_ln102_35, i32 %bitcast_ln102_36" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 95 'fadd' 'add_i_i2_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 96 [5/5] (6.32ns)   --->   "%add_i2_i5_i_i_i = fadd i32 %bitcast_ln102_37, i32 %bitcast_ln102_38" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 96 'fadd' 'add_i2_i5_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 97 [5/5] (6.32ns)   --->   "%add_i_i_i2_i_i = fadd i32 %bitcast_ln102_39, i32 %bitcast_ln102_40" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 97 'fadd' 'add_i_i_i2_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 98 [5/5] (6.32ns)   --->   "%add_i2_i_i5_i_i = fadd i32 %bitcast_ln102_41, i32 %bitcast_ln102_42" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 98 'fadd' 'add_i2_i_i5_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 99 [5/5] (6.32ns)   --->   "%add_i_i2_i9_i_i = fadd i32 %bitcast_ln102_43, i32 %bitcast_ln102_44" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 99 'fadd' 'add_i_i2_i9_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 100 [5/5] (6.32ns)   --->   "%add_i2_i5_i12_i_i = fadd i32 %bitcast_ln102_45, i32 %bitcast_ln102_46" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 100 'fadd' 'add_i2_i5_i12_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 101 [5/5] (6.32ns)   --->   "%add_i_i_i_i2_i = fadd i32 %bitcast_ln102_47, i32 %bitcast_ln102_48" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 101 'fadd' 'add_i_i_i_i2_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 102 [5/5] (6.32ns)   --->   "%add_i2_i_i_i5_i = fadd i32 %bitcast_ln102_49, i32 %bitcast_ln102_50" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 102 'fadd' 'add_i2_i_i_i5_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 103 [5/5] (6.32ns)   --->   "%add_i_i2_i_i9_i = fadd i32 %bitcast_ln102_51, i32 %bitcast_ln102_52" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 103 'fadd' 'add_i_i2_i_i9_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 104 [5/5] (6.32ns)   --->   "%add_i2_i5_i_i12_i = fadd i32 %bitcast_ln102_53, i32 %bitcast_ln102_54" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 104 'fadd' 'add_i2_i5_i_i12_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 105 [5/5] (6.32ns)   --->   "%add_i_i_i2_i17_i = fadd i32 %bitcast_ln102_55, i32 %bitcast_ln102_56" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 105 'fadd' 'add_i_i_i2_i17_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 106 [5/5] (6.32ns)   --->   "%add_i2_i_i5_i20_i = fadd i32 %bitcast_ln102_57, i32 %bitcast_ln102_58" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 106 'fadd' 'add_i2_i_i5_i20_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 107 [5/5] (6.32ns)   --->   "%add_i_i2_i9_i24_i = fadd i32 %bitcast_ln102_59, i32 %bitcast_ln102_60" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 107 'fadd' 'add_i_i2_i9_i24_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 108 [5/5] (6.32ns)   --->   "%add_i2_i5_i12_i27_i = fadd i32 %bitcast_ln102_61, i32 %bitcast_ln102_62" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 108 'fadd' 'add_i2_i5_i12_i27_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.32>
+ST_3 : Operation 109 [4/5] (6.32ns)   --->   "%add_i_i_i_i_i = fadd i32 %bitcast_ln102, i32 %bitcast_ln102_32" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 109 'fadd' 'add_i_i_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 110 [4/5] (6.32ns)   --->   "%add_i2_i_i_i_i = fadd i32 %bitcast_ln102_33, i32 %bitcast_ln102_34" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 110 'fadd' 'add_i2_i_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 111 [4/5] (6.32ns)   --->   "%add_i_i2_i_i_i = fadd i32 %bitcast_ln102_35, i32 %bitcast_ln102_36" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 111 'fadd' 'add_i_i2_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 112 [4/5] (6.32ns)   --->   "%add_i2_i5_i_i_i = fadd i32 %bitcast_ln102_37, i32 %bitcast_ln102_38" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 112 'fadd' 'add_i2_i5_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 113 [4/5] (6.32ns)   --->   "%add_i_i_i2_i_i = fadd i32 %bitcast_ln102_39, i32 %bitcast_ln102_40" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 113 'fadd' 'add_i_i_i2_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 114 [4/5] (6.32ns)   --->   "%add_i2_i_i5_i_i = fadd i32 %bitcast_ln102_41, i32 %bitcast_ln102_42" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 114 'fadd' 'add_i2_i_i5_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 115 [4/5] (6.32ns)   --->   "%add_i_i2_i9_i_i = fadd i32 %bitcast_ln102_43, i32 %bitcast_ln102_44" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 115 'fadd' 'add_i_i2_i9_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 116 [4/5] (6.32ns)   --->   "%add_i2_i5_i12_i_i = fadd i32 %bitcast_ln102_45, i32 %bitcast_ln102_46" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 116 'fadd' 'add_i2_i5_i12_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 117 [4/5] (6.32ns)   --->   "%add_i_i_i_i2_i = fadd i32 %bitcast_ln102_47, i32 %bitcast_ln102_48" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 117 'fadd' 'add_i_i_i_i2_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 118 [4/5] (6.32ns)   --->   "%add_i2_i_i_i5_i = fadd i32 %bitcast_ln102_49, i32 %bitcast_ln102_50" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 118 'fadd' 'add_i2_i_i_i5_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 119 [4/5] (6.32ns)   --->   "%add_i_i2_i_i9_i = fadd i32 %bitcast_ln102_51, i32 %bitcast_ln102_52" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 119 'fadd' 'add_i_i2_i_i9_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 120 [4/5] (6.32ns)   --->   "%add_i2_i5_i_i12_i = fadd i32 %bitcast_ln102_53, i32 %bitcast_ln102_54" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 120 'fadd' 'add_i2_i5_i_i12_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 121 [4/5] (6.32ns)   --->   "%add_i_i_i2_i17_i = fadd i32 %bitcast_ln102_55, i32 %bitcast_ln102_56" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 121 'fadd' 'add_i_i_i2_i17_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 122 [4/5] (6.32ns)   --->   "%add_i2_i_i5_i20_i = fadd i32 %bitcast_ln102_57, i32 %bitcast_ln102_58" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 122 'fadd' 'add_i2_i_i5_i20_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 123 [4/5] (6.32ns)   --->   "%add_i_i2_i9_i24_i = fadd i32 %bitcast_ln102_59, i32 %bitcast_ln102_60" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 123 'fadd' 'add_i_i2_i9_i24_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 124 [4/5] (6.32ns)   --->   "%add_i2_i5_i12_i27_i = fadd i32 %bitcast_ln102_61, i32 %bitcast_ln102_62" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 124 'fadd' 'add_i2_i5_i12_i27_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.32>
+ST_4 : Operation 125 [3/5] (6.32ns)   --->   "%add_i_i_i_i_i = fadd i32 %bitcast_ln102, i32 %bitcast_ln102_32" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 125 'fadd' 'add_i_i_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 126 [3/5] (6.32ns)   --->   "%add_i2_i_i_i_i = fadd i32 %bitcast_ln102_33, i32 %bitcast_ln102_34" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 126 'fadd' 'add_i2_i_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 127 [3/5] (6.32ns)   --->   "%add_i_i2_i_i_i = fadd i32 %bitcast_ln102_35, i32 %bitcast_ln102_36" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 127 'fadd' 'add_i_i2_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 128 [3/5] (6.32ns)   --->   "%add_i2_i5_i_i_i = fadd i32 %bitcast_ln102_37, i32 %bitcast_ln102_38" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 128 'fadd' 'add_i2_i5_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 129 [3/5] (6.32ns)   --->   "%add_i_i_i2_i_i = fadd i32 %bitcast_ln102_39, i32 %bitcast_ln102_40" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 129 'fadd' 'add_i_i_i2_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 130 [3/5] (6.32ns)   --->   "%add_i2_i_i5_i_i = fadd i32 %bitcast_ln102_41, i32 %bitcast_ln102_42" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 130 'fadd' 'add_i2_i_i5_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 131 [3/5] (6.32ns)   --->   "%add_i_i2_i9_i_i = fadd i32 %bitcast_ln102_43, i32 %bitcast_ln102_44" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 131 'fadd' 'add_i_i2_i9_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 132 [3/5] (6.32ns)   --->   "%add_i2_i5_i12_i_i = fadd i32 %bitcast_ln102_45, i32 %bitcast_ln102_46" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 132 'fadd' 'add_i2_i5_i12_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 133 [3/5] (6.32ns)   --->   "%add_i_i_i_i2_i = fadd i32 %bitcast_ln102_47, i32 %bitcast_ln102_48" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 133 'fadd' 'add_i_i_i_i2_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 134 [3/5] (6.32ns)   --->   "%add_i2_i_i_i5_i = fadd i32 %bitcast_ln102_49, i32 %bitcast_ln102_50" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 134 'fadd' 'add_i2_i_i_i5_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 135 [3/5] (6.32ns)   --->   "%add_i_i2_i_i9_i = fadd i32 %bitcast_ln102_51, i32 %bitcast_ln102_52" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 135 'fadd' 'add_i_i2_i_i9_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 136 [3/5] (6.32ns)   --->   "%add_i2_i5_i_i12_i = fadd i32 %bitcast_ln102_53, i32 %bitcast_ln102_54" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 136 'fadd' 'add_i2_i5_i_i12_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 137 [3/5] (6.32ns)   --->   "%add_i_i_i2_i17_i = fadd i32 %bitcast_ln102_55, i32 %bitcast_ln102_56" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 137 'fadd' 'add_i_i_i2_i17_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 138 [3/5] (6.32ns)   --->   "%add_i2_i_i5_i20_i = fadd i32 %bitcast_ln102_57, i32 %bitcast_ln102_58" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 138 'fadd' 'add_i2_i_i5_i20_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 139 [3/5] (6.32ns)   --->   "%add_i_i2_i9_i24_i = fadd i32 %bitcast_ln102_59, i32 %bitcast_ln102_60" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 139 'fadd' 'add_i_i2_i9_i24_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 140 [3/5] (6.32ns)   --->   "%add_i2_i5_i12_i27_i = fadd i32 %bitcast_ln102_61, i32 %bitcast_ln102_62" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 140 'fadd' 'add_i2_i5_i12_i27_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.32>
+ST_5 : Operation 141 [2/5] (6.32ns)   --->   "%add_i_i_i_i_i = fadd i32 %bitcast_ln102, i32 %bitcast_ln102_32" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 141 'fadd' 'add_i_i_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 142 [2/5] (6.32ns)   --->   "%add_i2_i_i_i_i = fadd i32 %bitcast_ln102_33, i32 %bitcast_ln102_34" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 142 'fadd' 'add_i2_i_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 143 [2/5] (6.32ns)   --->   "%add_i_i2_i_i_i = fadd i32 %bitcast_ln102_35, i32 %bitcast_ln102_36" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 143 'fadd' 'add_i_i2_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 144 [2/5] (6.32ns)   --->   "%add_i2_i5_i_i_i = fadd i32 %bitcast_ln102_37, i32 %bitcast_ln102_38" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 144 'fadd' 'add_i2_i5_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 145 [2/5] (6.32ns)   --->   "%add_i_i_i2_i_i = fadd i32 %bitcast_ln102_39, i32 %bitcast_ln102_40" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 145 'fadd' 'add_i_i_i2_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 146 [2/5] (6.32ns)   --->   "%add_i2_i_i5_i_i = fadd i32 %bitcast_ln102_41, i32 %bitcast_ln102_42" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 146 'fadd' 'add_i2_i_i5_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 147 [2/5] (6.32ns)   --->   "%add_i_i2_i9_i_i = fadd i32 %bitcast_ln102_43, i32 %bitcast_ln102_44" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 147 'fadd' 'add_i_i2_i9_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 148 [2/5] (6.32ns)   --->   "%add_i2_i5_i12_i_i = fadd i32 %bitcast_ln102_45, i32 %bitcast_ln102_46" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 148 'fadd' 'add_i2_i5_i12_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 149 [2/5] (6.32ns)   --->   "%add_i_i_i_i2_i = fadd i32 %bitcast_ln102_47, i32 %bitcast_ln102_48" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 149 'fadd' 'add_i_i_i_i2_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 150 [2/5] (6.32ns)   --->   "%add_i2_i_i_i5_i = fadd i32 %bitcast_ln102_49, i32 %bitcast_ln102_50" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 150 'fadd' 'add_i2_i_i_i5_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 151 [2/5] (6.32ns)   --->   "%add_i_i2_i_i9_i = fadd i32 %bitcast_ln102_51, i32 %bitcast_ln102_52" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 151 'fadd' 'add_i_i2_i_i9_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 152 [2/5] (6.32ns)   --->   "%add_i2_i5_i_i12_i = fadd i32 %bitcast_ln102_53, i32 %bitcast_ln102_54" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 152 'fadd' 'add_i2_i5_i_i12_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 153 [2/5] (6.32ns)   --->   "%add_i_i_i2_i17_i = fadd i32 %bitcast_ln102_55, i32 %bitcast_ln102_56" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 153 'fadd' 'add_i_i_i2_i17_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 154 [2/5] (6.32ns)   --->   "%add_i2_i_i5_i20_i = fadd i32 %bitcast_ln102_57, i32 %bitcast_ln102_58" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 154 'fadd' 'add_i2_i_i5_i20_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 155 [2/5] (6.32ns)   --->   "%add_i_i2_i9_i24_i = fadd i32 %bitcast_ln102_59, i32 %bitcast_ln102_60" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 155 'fadd' 'add_i_i2_i9_i24_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 156 [2/5] (6.32ns)   --->   "%add_i2_i5_i12_i27_i = fadd i32 %bitcast_ln102_61, i32 %bitcast_ln102_62" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 156 'fadd' 'add_i2_i5_i12_i27_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.32>
+ST_6 : Operation 157 [1/5] (6.32ns)   --->   "%add_i_i_i_i_i = fadd i32 %bitcast_ln102, i32 %bitcast_ln102_32" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 157 'fadd' 'add_i_i_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 158 [1/5] (6.32ns)   --->   "%add_i2_i_i_i_i = fadd i32 %bitcast_ln102_33, i32 %bitcast_ln102_34" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 158 'fadd' 'add_i2_i_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 159 [1/5] (6.32ns)   --->   "%add_i_i2_i_i_i = fadd i32 %bitcast_ln102_35, i32 %bitcast_ln102_36" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 159 'fadd' 'add_i_i2_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 160 [1/5] (6.32ns)   --->   "%add_i2_i5_i_i_i = fadd i32 %bitcast_ln102_37, i32 %bitcast_ln102_38" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 160 'fadd' 'add_i2_i5_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 161 [1/5] (6.32ns)   --->   "%add_i_i_i2_i_i = fadd i32 %bitcast_ln102_39, i32 %bitcast_ln102_40" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 161 'fadd' 'add_i_i_i2_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 162 [1/5] (6.32ns)   --->   "%add_i2_i_i5_i_i = fadd i32 %bitcast_ln102_41, i32 %bitcast_ln102_42" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 162 'fadd' 'add_i2_i_i5_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 163 [1/5] (6.32ns)   --->   "%add_i_i2_i9_i_i = fadd i32 %bitcast_ln102_43, i32 %bitcast_ln102_44" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 163 'fadd' 'add_i_i2_i9_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 164 [1/5] (6.32ns)   --->   "%add_i2_i5_i12_i_i = fadd i32 %bitcast_ln102_45, i32 %bitcast_ln102_46" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 164 'fadd' 'add_i2_i5_i12_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 165 [1/5] (6.32ns)   --->   "%add_i_i_i_i2_i = fadd i32 %bitcast_ln102_47, i32 %bitcast_ln102_48" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 165 'fadd' 'add_i_i_i_i2_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 166 [1/5] (6.32ns)   --->   "%add_i2_i_i_i5_i = fadd i32 %bitcast_ln102_49, i32 %bitcast_ln102_50" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 166 'fadd' 'add_i2_i_i_i5_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 167 [1/5] (6.32ns)   --->   "%add_i_i2_i_i9_i = fadd i32 %bitcast_ln102_51, i32 %bitcast_ln102_52" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 167 'fadd' 'add_i_i2_i_i9_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 168 [1/5] (6.32ns)   --->   "%add_i2_i5_i_i12_i = fadd i32 %bitcast_ln102_53, i32 %bitcast_ln102_54" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 168 'fadd' 'add_i2_i5_i_i12_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 169 [1/5] (6.32ns)   --->   "%add_i_i_i2_i17_i = fadd i32 %bitcast_ln102_55, i32 %bitcast_ln102_56" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 169 'fadd' 'add_i_i_i2_i17_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 170 [1/5] (6.32ns)   --->   "%add_i2_i_i5_i20_i = fadd i32 %bitcast_ln102_57, i32 %bitcast_ln102_58" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 170 'fadd' 'add_i2_i_i5_i20_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 171 [1/5] (6.32ns)   --->   "%add_i_i2_i9_i24_i = fadd i32 %bitcast_ln102_59, i32 %bitcast_ln102_60" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 171 'fadd' 'add_i_i2_i9_i24_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 172 [1/5] (6.32ns)   --->   "%add_i2_i5_i12_i27_i = fadd i32 %bitcast_ln102_61, i32 %bitcast_ln102_62" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 172 'fadd' 'add_i2_i5_i12_i27_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.32>
+ST_7 : Operation 173 [5/5] (6.32ns)   --->   "%add_i_i_i_i = fadd i32 %add_i_i_i_i_i, i32 %add_i2_i_i_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 173 'fadd' 'add_i_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 174 [5/5] (6.32ns)   --->   "%add_i6_i_i_i = fadd i32 %add_i_i2_i_i_i, i32 %add_i2_i5_i_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 174 'fadd' 'add_i6_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 175 [5/5] (6.32ns)   --->   "%add_i_i6_i_i = fadd i32 %add_i_i_i2_i_i, i32 %add_i2_i_i5_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 175 'fadd' 'add_i_i6_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 176 [5/5] (6.32ns)   --->   "%add_i6_i13_i_i = fadd i32 %add_i_i2_i9_i_i, i32 %add_i2_i5_i12_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 176 'fadd' 'add_i6_i13_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 177 [5/5] (6.32ns)   --->   "%add_i_i_i6_i = fadd i32 %add_i_i_i_i2_i, i32 %add_i2_i_i_i5_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 177 'fadd' 'add_i_i_i6_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 178 [5/5] (6.32ns)   --->   "%add_i6_i_i13_i = fadd i32 %add_i_i2_i_i9_i, i32 %add_i2_i5_i_i12_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 178 'fadd' 'add_i6_i_i13_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 179 [5/5] (6.32ns)   --->   "%add_i_i6_i21_i = fadd i32 %add_i_i_i2_i17_i, i32 %add_i2_i_i5_i20_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 179 'fadd' 'add_i_i6_i21_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 180 [5/5] (6.32ns)   --->   "%add_i6_i13_i28_i = fadd i32 %add_i_i2_i9_i24_i, i32 %add_i2_i5_i12_i27_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 180 'fadd' 'add_i6_i13_i28_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.32>
+ST_8 : Operation 181 [4/5] (6.32ns)   --->   "%add_i_i_i_i = fadd i32 %add_i_i_i_i_i, i32 %add_i2_i_i_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 181 'fadd' 'add_i_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 182 [4/5] (6.32ns)   --->   "%add_i6_i_i_i = fadd i32 %add_i_i2_i_i_i, i32 %add_i2_i5_i_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 182 'fadd' 'add_i6_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 183 [4/5] (6.32ns)   --->   "%add_i_i6_i_i = fadd i32 %add_i_i_i2_i_i, i32 %add_i2_i_i5_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 183 'fadd' 'add_i_i6_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 184 [4/5] (6.32ns)   --->   "%add_i6_i13_i_i = fadd i32 %add_i_i2_i9_i_i, i32 %add_i2_i5_i12_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 184 'fadd' 'add_i6_i13_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 185 [4/5] (6.32ns)   --->   "%add_i_i_i6_i = fadd i32 %add_i_i_i_i2_i, i32 %add_i2_i_i_i5_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 185 'fadd' 'add_i_i_i6_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 186 [4/5] (6.32ns)   --->   "%add_i6_i_i13_i = fadd i32 %add_i_i2_i_i9_i, i32 %add_i2_i5_i_i12_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 186 'fadd' 'add_i6_i_i13_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 187 [4/5] (6.32ns)   --->   "%add_i_i6_i21_i = fadd i32 %add_i_i_i2_i17_i, i32 %add_i2_i_i5_i20_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 187 'fadd' 'add_i_i6_i21_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 188 [4/5] (6.32ns)   --->   "%add_i6_i13_i28_i = fadd i32 %add_i_i2_i9_i24_i, i32 %add_i2_i5_i12_i27_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 188 'fadd' 'add_i6_i13_i28_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.32>
+ST_9 : Operation 189 [3/5] (6.32ns)   --->   "%add_i_i_i_i = fadd i32 %add_i_i_i_i_i, i32 %add_i2_i_i_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 189 'fadd' 'add_i_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 190 [3/5] (6.32ns)   --->   "%add_i6_i_i_i = fadd i32 %add_i_i2_i_i_i, i32 %add_i2_i5_i_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 190 'fadd' 'add_i6_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 191 [3/5] (6.32ns)   --->   "%add_i_i6_i_i = fadd i32 %add_i_i_i2_i_i, i32 %add_i2_i_i5_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 191 'fadd' 'add_i_i6_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 192 [3/5] (6.32ns)   --->   "%add_i6_i13_i_i = fadd i32 %add_i_i2_i9_i_i, i32 %add_i2_i5_i12_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 192 'fadd' 'add_i6_i13_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 193 [3/5] (6.32ns)   --->   "%add_i_i_i6_i = fadd i32 %add_i_i_i_i2_i, i32 %add_i2_i_i_i5_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 193 'fadd' 'add_i_i_i6_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 194 [3/5] (6.32ns)   --->   "%add_i6_i_i13_i = fadd i32 %add_i_i2_i_i9_i, i32 %add_i2_i5_i_i12_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 194 'fadd' 'add_i6_i_i13_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 195 [3/5] (6.32ns)   --->   "%add_i_i6_i21_i = fadd i32 %add_i_i_i2_i17_i, i32 %add_i2_i_i5_i20_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 195 'fadd' 'add_i_i6_i21_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 196 [3/5] (6.32ns)   --->   "%add_i6_i13_i28_i = fadd i32 %add_i_i2_i9_i24_i, i32 %add_i2_i5_i12_i27_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 196 'fadd' 'add_i6_i13_i28_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 6.32>
+ST_10 : Operation 197 [2/5] (6.32ns)   --->   "%add_i_i_i_i = fadd i32 %add_i_i_i_i_i, i32 %add_i2_i_i_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 197 'fadd' 'add_i_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 198 [2/5] (6.32ns)   --->   "%add_i6_i_i_i = fadd i32 %add_i_i2_i_i_i, i32 %add_i2_i5_i_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 198 'fadd' 'add_i6_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 199 [2/5] (6.32ns)   --->   "%add_i_i6_i_i = fadd i32 %add_i_i_i2_i_i, i32 %add_i2_i_i5_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 199 'fadd' 'add_i_i6_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 200 [2/5] (6.32ns)   --->   "%add_i6_i13_i_i = fadd i32 %add_i_i2_i9_i_i, i32 %add_i2_i5_i12_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 200 'fadd' 'add_i6_i13_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 201 [2/5] (6.32ns)   --->   "%add_i_i_i6_i = fadd i32 %add_i_i_i_i2_i, i32 %add_i2_i_i_i5_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 201 'fadd' 'add_i_i_i6_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 202 [2/5] (6.32ns)   --->   "%add_i6_i_i13_i = fadd i32 %add_i_i2_i_i9_i, i32 %add_i2_i5_i_i12_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 202 'fadd' 'add_i6_i_i13_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 203 [2/5] (6.32ns)   --->   "%add_i_i6_i21_i = fadd i32 %add_i_i_i2_i17_i, i32 %add_i2_i_i5_i20_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 203 'fadd' 'add_i_i6_i21_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 204 [2/5] (6.32ns)   --->   "%add_i6_i13_i28_i = fadd i32 %add_i_i2_i9_i24_i, i32 %add_i2_i5_i12_i27_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 204 'fadd' 'add_i6_i13_i28_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 6.32>
+ST_11 : Operation 205 [1/5] (6.32ns)   --->   "%add_i_i_i_i = fadd i32 %add_i_i_i_i_i, i32 %add_i2_i_i_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 205 'fadd' 'add_i_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 206 [1/5] (6.32ns)   --->   "%add_i6_i_i_i = fadd i32 %add_i_i2_i_i_i, i32 %add_i2_i5_i_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 206 'fadd' 'add_i6_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 207 [1/5] (6.32ns)   --->   "%add_i_i6_i_i = fadd i32 %add_i_i_i2_i_i, i32 %add_i2_i_i5_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 207 'fadd' 'add_i_i6_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 208 [1/5] (6.32ns)   --->   "%add_i6_i13_i_i = fadd i32 %add_i_i2_i9_i_i, i32 %add_i2_i5_i12_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 208 'fadd' 'add_i6_i13_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 209 [1/5] (6.32ns)   --->   "%add_i_i_i6_i = fadd i32 %add_i_i_i_i2_i, i32 %add_i2_i_i_i5_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 209 'fadd' 'add_i_i_i6_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 210 [1/5] (6.32ns)   --->   "%add_i6_i_i13_i = fadd i32 %add_i_i2_i_i9_i, i32 %add_i2_i5_i_i12_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 210 'fadd' 'add_i6_i_i13_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 211 [1/5] (6.32ns)   --->   "%add_i_i6_i21_i = fadd i32 %add_i_i_i2_i17_i, i32 %add_i2_i_i5_i20_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 211 'fadd' 'add_i_i6_i21_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 212 [1/5] (6.32ns)   --->   "%add_i6_i13_i28_i = fadd i32 %add_i_i2_i9_i24_i, i32 %add_i2_i5_i12_i27_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 212 'fadd' 'add_i6_i13_i28_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 6.32>
+ST_12 : Operation 213 [5/5] (6.32ns)   --->   "%add_i_i_i = fadd i32 %add_i_i_i_i, i32 %add_i6_i_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 213 'fadd' 'add_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 214 [5/5] (6.32ns)   --->   "%add_i14_i_i = fadd i32 %add_i_i6_i_i, i32 %add_i6_i13_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 214 'fadd' 'add_i14_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 215 [5/5] (6.32ns)   --->   "%add_i_i14_i = fadd i32 %add_i_i_i6_i, i32 %add_i6_i_i13_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 215 'fadd' 'add_i_i14_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 216 [5/5] (6.32ns)   --->   "%add_i14_i29_i = fadd i32 %add_i_i6_i21_i, i32 %add_i6_i13_i28_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 216 'fadd' 'add_i14_i29_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 6.32>
+ST_13 : Operation 217 [4/5] (6.32ns)   --->   "%add_i_i_i = fadd i32 %add_i_i_i_i, i32 %add_i6_i_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 217 'fadd' 'add_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 218 [4/5] (6.32ns)   --->   "%add_i14_i_i = fadd i32 %add_i_i6_i_i, i32 %add_i6_i13_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 218 'fadd' 'add_i14_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 219 [4/5] (6.32ns)   --->   "%add_i_i14_i = fadd i32 %add_i_i_i6_i, i32 %add_i6_i_i13_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 219 'fadd' 'add_i_i14_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 220 [4/5] (6.32ns)   --->   "%add_i14_i29_i = fadd i32 %add_i_i6_i21_i, i32 %add_i6_i13_i28_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 220 'fadd' 'add_i14_i29_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 6.32>
+ST_14 : Operation 221 [3/5] (6.32ns)   --->   "%add_i_i_i = fadd i32 %add_i_i_i_i, i32 %add_i6_i_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 221 'fadd' 'add_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 222 [3/5] (6.32ns)   --->   "%add_i14_i_i = fadd i32 %add_i_i6_i_i, i32 %add_i6_i13_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 222 'fadd' 'add_i14_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 223 [3/5] (6.32ns)   --->   "%add_i_i14_i = fadd i32 %add_i_i_i6_i, i32 %add_i6_i_i13_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 223 'fadd' 'add_i_i14_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 224 [3/5] (6.32ns)   --->   "%add_i14_i29_i = fadd i32 %add_i_i6_i21_i, i32 %add_i6_i13_i28_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 224 'fadd' 'add_i14_i29_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 6.32>
+ST_15 : Operation 225 [2/5] (6.32ns)   --->   "%add_i_i_i = fadd i32 %add_i_i_i_i, i32 %add_i6_i_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 225 'fadd' 'add_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 226 [2/5] (6.32ns)   --->   "%add_i14_i_i = fadd i32 %add_i_i6_i_i, i32 %add_i6_i13_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 226 'fadd' 'add_i14_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 227 [2/5] (6.32ns)   --->   "%add_i_i14_i = fadd i32 %add_i_i_i6_i, i32 %add_i6_i_i13_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 227 'fadd' 'add_i_i14_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 228 [2/5] (6.32ns)   --->   "%add_i14_i29_i = fadd i32 %add_i_i6_i21_i, i32 %add_i6_i13_i28_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 228 'fadd' 'add_i14_i29_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 6.32>
+ST_16 : Operation 229 [1/5] (6.32ns)   --->   "%add_i_i_i = fadd i32 %add_i_i_i_i, i32 %add_i6_i_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 229 'fadd' 'add_i_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 230 [1/5] (6.32ns)   --->   "%add_i14_i_i = fadd i32 %add_i_i6_i_i, i32 %add_i6_i13_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 230 'fadd' 'add_i14_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 231 [1/5] (6.32ns)   --->   "%add_i_i14_i = fadd i32 %add_i_i_i6_i, i32 %add_i6_i_i13_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 231 'fadd' 'add_i_i14_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 232 [1/5] (6.32ns)   --->   "%add_i14_i29_i = fadd i32 %add_i_i6_i21_i, i32 %add_i6_i13_i28_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 232 'fadd' 'add_i14_i29_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 6.32>
+ST_17 : Operation 233 [5/5] (6.32ns)   --->   "%add_i_i = fadd i32 %add_i_i_i, i32 %add_i14_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 233 'fadd' 'add_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 234 [5/5] (6.32ns)   --->   "%add_i30_i = fadd i32 %add_i_i14_i, i32 %add_i14_i29_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 234 'fadd' 'add_i30_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 6.32>
+ST_18 : Operation 235 [4/5] (6.32ns)   --->   "%add_i_i = fadd i32 %add_i_i_i, i32 %add_i14_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 235 'fadd' 'add_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 236 [4/5] (6.32ns)   --->   "%add_i30_i = fadd i32 %add_i_i14_i, i32 %add_i14_i29_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 236 'fadd' 'add_i30_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 6.32>
+ST_19 : Operation 237 [3/5] (6.32ns)   --->   "%add_i_i = fadd i32 %add_i_i_i, i32 %add_i14_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 237 'fadd' 'add_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 238 [3/5] (6.32ns)   --->   "%add_i30_i = fadd i32 %add_i_i14_i, i32 %add_i14_i29_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 238 'fadd' 'add_i30_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 6.32>
+ST_20 : Operation 239 [2/5] (6.32ns)   --->   "%add_i_i = fadd i32 %add_i_i_i, i32 %add_i14_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 239 'fadd' 'add_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 240 [2/5] (6.32ns)   --->   "%add_i30_i = fadd i32 %add_i_i14_i, i32 %add_i14_i29_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 240 'fadd' 'add_i30_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 6.32>
+ST_21 : Operation 241 [1/5] (6.32ns)   --->   "%add_i_i = fadd i32 %add_i_i_i, i32 %add_i14_i_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 241 'fadd' 'add_i_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 242 [1/5] (6.32ns)   --->   "%add_i30_i = fadd i32 %add_i_i14_i, i32 %add_i14_i29_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 242 'fadd' 'add_i30_i' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 6.32>
+ST_22 : Operation 243 [5/5] (6.32ns)   --->   "%l_sum = fadd i32 %add_i_i, i32 %add_i30_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 243 'fadd' 'l_sum' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 6.32>
+ST_23 : Operation 244 [4/5] (6.32ns)   --->   "%l_sum = fadd i32 %add_i_i, i32 %add_i30_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 244 'fadd' 'l_sum' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 6.32>
+ST_24 : Operation 245 [3/5] (6.32ns)   --->   "%l_sum = fadd i32 %add_i_i, i32 %add_i30_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 245 'fadd' 'l_sum' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 6.32>
+ST_25 : Operation 246 [2/5] (6.32ns)   --->   "%l_sum = fadd i32 %add_i_i, i32 %add_i30_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 246 'fadd' 'l_sum' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 6.32>
+ST_26 : Operation 247 [1/5] (6.32ns)   --->   "%l_sum = fadd i32 %add_i_i, i32 %add_i30_i" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43]   --->   Operation 247 'fadd' 'l_sum' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 3.40>
+ST_27 : Operation 248 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %l_data2, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 248 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 249 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1024 %l_mulStr1, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 249 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 250 [1/1] (0.00ns)   --->   "%bitcast_ln174 = bitcast i32 %l_sum" [/home/jrk/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 250 'bitcast' 'bitcast_ln174' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 251 [1/1] (3.40ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %l_data2, i32 %bitcast_ln174" [/home/jrk/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 251 'write' 'write_ln174' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_27 : Operation 252 [1/1] (0.00ns)   --->   "%ret_ln58 = ret" [/home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/funcs/sum.hpp:58]   --->   Operation 252 'ret' 'ret_ln58' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.4ns
+The critical path consists of the following:
+	fifo read on port 'l_mulStr1' (/home/jrk/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145) [5]  (3.4 ns)
+
+ <State 2>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i_i_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [70]  (6.33 ns)
+
+ <State 3>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i_i_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [70]  (6.33 ns)
+
+ <State 4>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i_i_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [70]  (6.33 ns)
+
+ <State 5>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i_i_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [70]  (6.33 ns)
+
+ <State 6>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i_i_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [70]  (6.33 ns)
+
+ <State 7>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [72]  (6.33 ns)
+
+ <State 8>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [72]  (6.33 ns)
+
+ <State 9>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [72]  (6.33 ns)
+
+ <State 10>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [72]  (6.33 ns)
+
+ <State 11>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [72]  (6.33 ns)
+
+ <State 12>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [76]  (6.33 ns)
+
+ <State 13>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [76]  (6.33 ns)
+
+ <State 14>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [76]  (6.33 ns)
+
+ <State 15>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [76]  (6.33 ns)
+
+ <State 16>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [76]  (6.33 ns)
+
+ <State 17>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [84]  (6.33 ns)
+
+ <State 18>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [84]  (6.33 ns)
+
+ <State 19>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [84]  (6.33 ns)
+
+ <State 20>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [84]  (6.33 ns)
+
+ <State 21>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('add_i_i', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [84]  (6.33 ns)
+
+ <State 22>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('l_sum', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [100]  (6.33 ns)
+
+ <State 23>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('l_sum', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [100]  (6.33 ns)
+
+ <State 24>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('l_sum', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [100]  (6.33 ns)
+
+ <State 25>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('l_sum', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [100]  (6.33 ns)
+
+ <State 26>: 6.33ns
+The critical path consists of the following:
+	'fadd' operation ('l_sum', /home/jrk/vivado/zc706/sdk/wksp1/zc706_lstm_kernels/libs/xf_BLAS/L1/include/hw/xf_blas/helpers/utils/utils.hpp:43) [100]  (6.33 ns)
+
+ <State 27>: 3.4ns
+The critical path consists of the following:
+	fifo write on port 'l_data2' (/home/jrk/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174) [102]  (3.4 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
